@@ -495,9 +495,12 @@
                   follow us
                 </div>
               </div>
-              <div class="rd-footer-value">
+              <div class="rd-footer-values">
                 <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                  icoen@ciputra.ac.id
+                  facebook
+                </div>
+                <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                  instagram
                 </div>
               </div>
             </div>
@@ -543,9 +546,8 @@
     width: 100vw;
     height: 100vh;
     height: calc((var(--vh, 1vh) * 100));
-    overflow: hidden;
     background: var(--primary-color);
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1206,6 +1208,13 @@
               .rd-footer-values {
                 position: relative;
                 color: var(--primary-color);
+                gap: 1rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .rd-text-row {
+                  margin: 0;
+                }
               }
             }
             .rd-footer-social {
@@ -1244,6 +1253,117 @@
       }
       to {
         transform: scaleX(1) translate3d(0, 100%, 0);
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      .rd-mouse {
+        display: none;
+      }
+      .rd-navigation-bar {
+        width: 100%;
+        height: 3rem;
+        border-right: none;
+        border-bottom: 0.125rem solid var(--font-color);
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .rd-navigation-button {
+          .rd-navigation-button-bar {
+            width: 1rem;
+            height: 1.5px;
+            &:first-child {
+              transform: translateY(-0.125rem);
+            }
+            &:last-child {
+              transform: translateY(0.125rem);
+            }
+          }
+        }
+        .rd-logo-container {
+          top: 0;
+          left: 3rem;
+          transform: none;
+        }
+        button.rd-register-button {
+          top: 0;
+          right: 0;
+          transform: none;
+          bottom: auto;
+          left: auto;
+        }
+      }
+      .rd-body {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 3rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        flex-direction: column;
+        .rd-section {
+          padding: 1.5rem;
+          border: none;
+        }
+        .rd-date,
+        .rd-section-caption {
+          top: 1.5rem !important;
+          right: 1.5rem !important;
+        }
+        .rd-section-decoration {
+          display: none;
+        }
+        .rd-gap-section {
+          display: none;
+        }
+        .rd-introduction-section {
+          width: 100vw;
+          height: calc(100vh - 3rem);
+          .rd-caption {
+            bottom: 1.5rem;
+            left: 1.5rem;
+          }
+        }
+        .rd-about-section {
+          width: 100vw;
+          height: auto;
+          .rd-section-title {
+            margin-top: 3rem;
+          }
+        }
+        .rd-rundown-section {
+          width: 100vw;
+          height: auto;
+          padding: 1.5rem 1.5rem 0 1.5rem;
+          .rd-section-data-container {
+            width: 100%;
+            height: auto;
+            padding: 3rem 0 0 0;
+            flex-wrap: nowrap;
+            .rd-section-data {
+              width: 100%;
+              height: auto;
+              padding: 1rem 0;
+              &::after {
+                width: 100%;
+                bottom: 0;
+              }
+              &:last-child::after {
+                display: none;
+              }
+            }
+          }
+        }
+        .rd-footer-section {
+          width: 100vw;
+          height: auto;
+          .rd-section-footer-contact {
+            padding: 1.5rem;
+          }
+          .rd-section-footer-end {
+            padding: 0 1.5rem;
+          }
+        }
       }
     }
   }
@@ -1296,6 +1416,21 @@
     }
     @media only screen and (max-width: 1024px) {
       font-size: 24px;
+      .rd-headline-2 {
+        font-size: 1rem;
+      }
+      .rd-headline-3 {
+        font-size: 0.85rem;
+      }
+      .rd-headline-4 {
+        font-size: 0.7rem;
+      }
+      .rd-caption-text {
+        font-size: 0.55rem;
+      }  
+      .rd-body-text {
+        font-size: 0.6rem;
+      }
     }
     @media only screen and (max-width: 410px) and (min-width: 321px) {
       font-size: 18px;
