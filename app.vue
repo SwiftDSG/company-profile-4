@@ -9,13 +9,27 @@
         <div class="rd-navigation-button-bar"></div>
       </div>
       <div class="rd-logo-container">
-        <svg class="rd-logo" viewBox="0 0 1587 373" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"/>
-          <circle cx="683.37" cy="186.37" r="79.4279"/>
-          <path d="M0 365.4V7H101.376V365.4H0Z"/>
-          <path d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"/>
-          <path d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"/>
-          <path d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"/>
+        <svg
+          class="rd-logo"
+          viewBox="0 0 1587 373"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"
+          />
+          <circle cx="683.37" cy="186.37" r="79.4279" />
+          <path d="M0 365.4V7H101.376V365.4H0Z" />
+          <path
+            d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"
+          />
+          <path
+            d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"
+          />
+          <path
+            d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"
+          />
         </svg>
       </div>
       <button class="rd-register-button">
@@ -24,19 +38,43 @@
     </div>
     <div class="rd-body">
       <div class="rd-background">
-        <svg class="rd-background-svg-1" viewBox="0 0 672 373" xmlns="http://www.w3.org/2000/svg">
-          <path d="M621.308 7H671.996V186.2H621.308V7ZM552.188 186.2H501.5V7H552.188V186.2ZM624.892 116.312H548.604V74.328H624.892V116.312Z"/>
-          <path d="M374.04 186.2V47.192H319V7H479.512V47.192H424.728V186.2H374.04Z"/>
-          <path d="M141.008 0C174.8 0 203.984 6.65601 228.56 19.968C253.477 33.28 272.763 53.0773 286.416 79.36C300.411 105.301 307.408 137.728 307.408 176.64C307.408 218.283 299.216 253.781 282.832 283.136C266.789 312.149 244.432 334.336 215.76 349.696C187.429 365.056 154.32 372.736 116.432 372.736C96.6346 372.736 77.52 370.347 59.088 365.568C40.656 361.131 24.784 354.816 11.472 346.624L48.336 273.92C58.576 281.088 69.1573 286.037 80.08 288.768C91.344 291.157 102.779 292.352 114.384 292.352C142.032 292.352 164.048 283.989 180.432 267.264C196.816 250.539 205.008 226.133 205.008 194.048C205.008 188.245 205.008 182.272 205.008 176.128C205.008 169.643 204.496 163.157 203.472 156.672L228.56 177.664C222.416 190.293 214.395 200.875 204.496 209.408C194.597 217.941 182.992 224.427 169.68 228.864C156.368 233.301 141.179 235.52 124.112 235.52C101.584 235.52 80.9333 230.912 62.16 221.696C43.728 212.139 28.88 198.997 17.616 182.272C6.35197 165.205 0.719971 145.237 0.719971 122.368C0.719971 97.4507 7.03464 75.9467 19.664 57.856C32.2933 39.424 49.1893 25.2587 70.352 15.36C91.5146 5.12001 115.067 0 141.008 0ZM147.664 72.192C138.107 72.192 129.744 74.0693 122.576 77.824C115.408 81.5787 109.605 86.8694 105.168 93.696C101.072 100.181 99.024 108.203 99.024 117.76C99.024 131.413 103.461 142.336 112.336 150.528C121.552 158.72 133.499 162.816 148.176 162.816C158.075 162.816 166.779 160.939 174.288 157.184C181.797 153.429 187.6 148.139 191.696 141.312C195.792 134.485 197.84 126.464 197.84 117.248C197.84 108.373 195.792 100.693 191.696 94.208C187.6 87.3813 181.797 82.0907 174.288 78.336C166.779 74.24 157.904 72.192 147.664 72.192Z"/>
+        <svg
+          class="rd-background-svg-1"
+          viewBox="0 0 672 373"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M621.308 7H671.996V186.2H621.308V7ZM552.188 186.2H501.5V7H552.188V186.2ZM624.892 116.312H548.604V74.328H624.892V116.312Z"
+          />
+          <path
+            d="M374.04 186.2V47.192H319V7H479.512V47.192H424.728V186.2H374.04Z"
+          />
+          <path
+            d="M141.008 0C174.8 0 203.984 6.65601 228.56 19.968C253.477 33.28 272.763 53.0773 286.416 79.36C300.411 105.301 307.408 137.728 307.408 176.64C307.408 218.283 299.216 253.781 282.832 283.136C266.789 312.149 244.432 334.336 215.76 349.696C187.429 365.056 154.32 372.736 116.432 372.736C96.6346 372.736 77.52 370.347 59.088 365.568C40.656 361.131 24.784 354.816 11.472 346.624L48.336 273.92C58.576 281.088 69.1573 286.037 80.08 288.768C91.344 291.157 102.779 292.352 114.384 292.352C142.032 292.352 164.048 283.989 180.432 267.264C196.816 250.539 205.008 226.133 205.008 194.048C205.008 188.245 205.008 182.272 205.008 176.128C205.008 169.643 204.496 163.157 203.472 156.672L228.56 177.664C222.416 190.293 214.395 200.875 204.496 209.408C194.597 217.941 182.992 224.427 169.68 228.864C156.368 233.301 141.179 235.52 124.112 235.52C101.584 235.52 80.9333 230.912 62.16 221.696C43.728 212.139 28.88 198.997 17.616 182.272C6.35197 165.205 0.719971 145.237 0.719971 122.368C0.719971 97.4507 7.03464 75.9467 19.664 57.856C32.2933 39.424 49.1893 25.2587 70.352 15.36C91.5146 5.12001 115.067 0 141.008 0ZM147.664 72.192C138.107 72.192 129.744 74.0693 122.576 77.824C115.408 81.5787 109.605 86.8694 105.168 93.696C101.072 100.181 99.024 108.203 99.024 117.76C99.024 131.413 103.461 142.336 112.336 150.528C121.552 158.72 133.499 162.816 148.176 162.816C158.075 162.816 166.779 160.939 174.288 157.184C181.797 153.429 187.6 148.139 191.696 141.312C195.792 134.485 197.84 126.464 197.84 117.248C197.84 108.373 195.792 100.693 191.696 94.208C187.6 87.3813 181.797 82.0907 174.288 78.336C166.779 74.24 157.904 72.192 147.664 72.192Z"
+          />
         </svg>
         <div class="rd-background-divider"></div>
-        <svg class="rd-background-svg-2" viewBox="0 0 1587 373" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"/>
-          <circle cx="683.37" cy="186.37" r="79.4279"/>
-          <path d="M0 365.4V7H101.376V365.4H0Z"/>
-          <path d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"/>
-          <path d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"/>
-          <path d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"/>
+        <svg
+          class="rd-background-svg-2"
+          viewBox="0 0 1587 373"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"
+          />
+          <circle cx="683.37" cy="186.37" r="79.4279" />
+          <path d="M0 365.4V7H101.376V365.4H0Z" />
+          <path
+            d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"
+          />
+          <path
+            d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"
+          />
+          <path
+            d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"
+          />
         </svg>
         <div class="rd-decoration-box-container rd-decoration-1">
           <div class="rd-decoration-box-2">
@@ -59,24 +97,51 @@
       </div>
       <div class="rd-introduction-section">
         <div class="rd-caption">
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">The 9<span class="rd-text-superscript rd-headline-6">th</span></div>
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">International Conference</div>
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">On Entrepreneurship 2022</div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
+            The 9<span class="rd-text-superscript rd-headline-6">th</span>
+          </div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
+            International Conference
+          </div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
+            On Entrepreneurship 2022
+          </div>
         </div>
         <div class="rd-date">
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-4"><span class="rd-text-highlight">27 August</span> 2022<span class="rd-text-decoration"></span></div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
+            <span class="rd-text-highlight">27 August</span> 2022<span
+              class="rd-text-decoration"
+            ></span>
+          </div>
         </div>
       </div>
       <div class="rd-section rd-about-section">
         <div class="rd-section-caption">
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">About<span class="rd-text-decoration rd-text-decoration-primary"></span></div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
+            About<span
+              class="rd-text-decoration rd-text-decoration-primary"
+            ></span>
+          </div>
         </div>
         <div class="rd-section-title">
-          <div class="rd-text-row rd-headline-2"><span class="rd-text-highlight rd-text-highlight-primary">Sustainable Business</span></div>
+          <div class="rd-text-row rd-headline-2">
+            <span class="rd-text-highlight rd-text-highlight-primary"
+              >Sustainable Business</span
+            >
+          </div>
           <div class="rd-text-row rd-headline-2">Through Digitalization</div>
         </div>
         <div class="rd-section-paragraph">
-          <div class="rd-text-row rd-body-text">The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.</div>
+          <div class="rd-text-row rd-body-text">
+            The Indonesian economy based on the amount of Gross Domestic Product
+            (GDP) based on current prices in the second quarter of 2019 reached
+            Rp3,963.5 trillion and at the base of constant prices reached
+            Rp2,735.2 trillion. Indonesia’s economy in the second quarter of
+            2019 compared to the second quarter of 2018 grew 5.05 percent
+            (y-on-y). From the production side, growth was driven by almost all
+            business fields, where the highest growth was achieved by Other
+            Service Business Fields which grew 10.73 percent.
+          </div>
           <!-- <div class="rd-text-row rd-body-text">The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on</div>
           <div class="rd-text-row rd-body-text">current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of</div>
           <div class="rd-text-row rd-body-text">constant prices reached Rp2,735.2 trillion. Indonesia's economy in the second quarter of 2019</div>
@@ -196,102 +261,150 @@
       <div class="rd-gap-section"></div>
       <div class="rd-section rd-rundown-section">
         <div class="rd-section-caption">
-          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">Rundown<span class="rd-text-decoration rd-text-decoration-primary"></span></div>
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
+            Rundown<span
+              class="rd-text-decoration rd-text-decoration-primary"
+            ></span>
+          </div>
         </div>
         <div class="rd-section-data-container">
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">12:35 - 13:05 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                12:35 - 13:05 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">J.E Susanto</div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">Universitas Ciputra, Indonesia</div>
+              <div class="rd-text-row rd-headline-6">
+                Universitas Ciputra, Indonesia
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Welcoming Speech from the Conference Chair</div>
+              <div class="rd-text-row rd-headline-5">
+                Welcoming Speech from the Conference Chair
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">13:05 - 14:05 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                13:05 - 14:05 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">Sandiaga Salahuddin Uno</div>
+              <div class="rd-text-row rd-headline-3">
+                Sandiaga Salahuddin Uno
+              </div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">Minister of Tourism and Creative Economy of Indonesia</div>
+              <div class="rd-text-row rd-headline-6">
+                Minister of Tourism and Creative Economy of Indonesia
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Inclusive design for a digital world</div>
+              <div class="rd-text-row rd-headline-5">
+                Inclusive design for a digital world
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">14:05 - 14:35 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                14:05 - 14:35 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">Christina Whidya Utami</div>
+              <div class="rd-text-row rd-headline-3">
+                Christina Whidya Utami
+              </div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">Universitas Ciputra, Indonesia</div>
+              <div class="rd-text-row rd-headline-6">
+                Universitas Ciputra, Indonesia
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Enabling ethical Design</div>
+              <div class="rd-text-row rd-headline-5">
+                Enabling ethical Design
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">14:35 - 15:05 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                14:35 - 15:05 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">Tao Wang</div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">Nanjing Normal University, China</div>
+              <div class="rd-text-row rd-headline-6">
+                Nanjing Normal University, China
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Design with Mental Health in Mind</div>
+              <div class="rd-text-row rd-headline-5">
+                Design with Mental Health in Mind
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">15:05 - 15:35 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                15:05 - 15:35 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">Arnold J.</div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">The University of Western, Australia</div>
+              <div class="rd-text-row rd-headline-6">
+                The University of Western, Australia
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Feminist data practices for inclusivity</div>
+              <div class="rd-text-row rd-headline-5">
+                Feminist data practices for inclusivity
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">15:35 - 16:05 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                15:35 - 16:05 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">Nilay Balkan</div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">University of Glasgow, United Kingdom</div>
+              <div class="rd-text-row rd-headline-6">
+                University of Glasgow, United Kingdom
+              </div>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Where do we go from here?</div>
+              <div class="rd-text-row rd-headline-5">
+                Where do we go from here?
+              </div>
             </div>
           </div>
           <div class="rd-section-data">
             <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">16:05 - 16:15 WIB</div>
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                16:05 - 16:15 WIB
+              </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">J.E Susanto</div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">Universitas Ciputra, Indonesia</div>
+              <div class="rd-text-row rd-headline-6">
+                Universitas Ciputra, Indonesia
+              </div>
             </div>
             <div class="rd-section-data-title">
               <div class="rd-text-row rd-headline-5">Closing Speech</div>
@@ -330,7 +443,74 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
-      .rd-section.rd-
+      <div class="rd-section rd-footer-section">
+        <div class="rd-section-caption">
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
+            Thank you<span
+              class="rd-text-decoration rd-text-decoration-primary"
+            ></span>
+          </div>
+        </div>
+        <div class="rd-section-body">
+          <div class="rd-footer-collab">
+            <div class="rd-footer-placeholder">
+              <div
+                class="rd-text-row rd-text-row-uppercase rd-placeholder-text"
+              >
+                in collaboration with
+              </div>
+            </div>
+          </div>
+          <div class="rd-footer-support">
+            <div class="rd-footer-placeholder">
+              <div
+                class="rd-text-row rd-text-row-uppercase rd-placeholder-text"
+              >
+                supported by
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rd-section-footer">
+          <div class="rd-section-footer-contact">
+            <div class="rd-footer-email">
+              <div class="rd-footer-placeholder">
+                <div
+                  class="rd-text-row rd-text-row-uppercase rd-placeholder-text"
+                >
+                  get in touch
+                </div>
+              </div>
+              <div class="rd-footer-values">
+                <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                  icoen@ciputra.ac.id
+                </div>
+              </div>
+            </div>
+            <div class="rd-footer-social">
+              <div class="rd-footer-placeholder">
+                <div
+                  class="rd-text-row rd-text-row-uppercase rd-placeholder-text"
+                >
+                  follow us
+                </div>
+              </div>
+              <div class="rd-footer-value">
+                <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
+                  icoen@ciputra.ac.id
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rd-section-footer-end">
+            <div class="rd-footer-copyright">
+              <div class="rd-text-row rd-text-row-uppercase rd-headline-6">
+                © All rights reserved Universitas Ciputra 2022
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -353,8 +533,8 @@
 
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
     mediaQuery.addEventListener("change", resizeHandler);
-    resizeHandler(mediaQuery)
-  })
+    resizeHandler(mediaQuery);
+  });
 </script>
 
 <style lang="scss" scoped>
@@ -513,7 +693,7 @@
         border-radius: 1px;
         overflow: hidden;
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           right: 0;
@@ -578,10 +758,10 @@
           position: relative;
           height: 1rem;
           path {
-            fill: var(--font-color)
+            fill: var(--font-color);
           }
           circle {
-            fill: var(--font-light-color)
+            fill: var(--font-light-color);
           }
         }
       }
@@ -621,6 +801,9 @@
         border-left: 3px solid var(--font-color);
         border-right: 3px solid var(--font-color);
         box-sizing: border-box;
+        &:last-child {
+          border-right: none;
+        }
       }
       .rd-section-decoration {
         position: absolute;
@@ -752,7 +935,8 @@
           }
         }
       }
-      .rd-date, .rd-section-caption {
+      .rd-date,
+      .rd-section-caption {
         position: absolute;
         top: 3rem;
         right: 3rem;
@@ -850,7 +1034,7 @@
       }
       .rd-about-section {
         position: relative;
-        width: 50vw;
+        width: calc(50vw - 1.5rem);
         height: 100%;
         background: var(--font-light-color);
         display: flex;
@@ -932,7 +1116,7 @@
               }
             }
             &::after {
-              content: '';
+              content: "";
               position: absolute;
               bottom: 1.5rem;
               left: 0;
@@ -949,16 +1133,117 @@
           justify-content: space-between;
         }
       }
+      .rd-footer-section {
+        position: relative;
+        width: calc(50vw - 1.5rem);
+        height: 100%;
+        background: var(--font-light-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .rd-section-body {
+          position: relative;
+          width: 100%;
+          height: calc(100% - 5rem);
+          padding-top: 5rem;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .rd-footer-collab {
+            position: relative;
+            width: 100%;
+            height: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          .rd-footer-support {
+            position: relative;
+            width: 100%;
+            height: calc(100% * 2 / 3);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        }
+        .rd-section-footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 8rem;
+          background: var(--font-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .rd-section-footer-contact {
+            position: relative;
+            width: 100%;
+            height: 5rem;
+            padding: 1.5rem 3rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .rd-footer-email,
+            .rd-footer-social {
+              position: relative;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
+              .rd-footer-placeholder {
+                position: relative;
+                color: var(--font-light-color);
+              }
+              .rd-footer-values {
+                position: relative;
+                color: var(--primary-color);
+              }
+            }
+            .rd-footer-social {
+              margin-left: 4rem;
+            }
+          }
+          .rd-section-footer-end {
+            position: relative;
+            width: 100%;
+            height: 3rem;
+            border-top: 0.125rem solid var(--font-light-color);
+            padding: 0 3rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .rd-footer-copyright {
+              position: relative;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              .rd-text-row {
+                color: var(--font-light-color);
+              }
+            }
+          }
+        }
+      }
     }
     @keyframes rd-mouse-scroll-indicator {
       0% {
         transform: scaleY(0) translateZ(0);
       }
       50% {
-        transform:scaleX(1) translateZ(0);
+        transform: scaleX(1) translateZ(0);
       }
       to {
-        transform:scaleX(1) translate3d(0, 100%, 0);
+        transform: scaleX(1) translate3d(0, 100%, 0);
       }
     }
   }
@@ -980,8 +1265,8 @@
 
   html,
   body {
-    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, sans-serif;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 24px;
     color: var(--font-color);
     word-spacing: 1px;
@@ -1027,7 +1312,7 @@
   }
 
   .rd-headline-1 {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 3rem;
     text-transform: uppercase;
@@ -1035,36 +1320,36 @@
   }
   .rd-headline-2 {
     font-size: 2rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: 1;
   }
   .rd-headline-3 {
     font-size: 1.25rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: 1;
   }
   .rd-headline-4 {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: 1;
   }
   .rd-headline-5 {
     font-size: 0.75rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: 1;
   }
   .rd-headline-6 {
     font-size: 0.55rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: 1;
   }
   .rd-caption-text {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 0.65rem;
     font-weight: 700;
     line-height: 1;
@@ -1072,14 +1357,16 @@
     text-transform: uppercase;
   }
   .rd-body-text {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 0.75rem;
     font-weight: 500;
   }
   .rd-placeholder-text {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 0.55rem;
     font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
   }
-
 </style>
