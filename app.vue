@@ -329,6 +329,8 @@
           </div>
         </div>
       </div>
+      <div class="rd-gap-section"></div>
+      .rd-section.rd-
     </div>
   </div>
 </template>
@@ -963,6 +965,10 @@
 </style>
 
 <style lang="scss">
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   :root {
     user-select: none;
     --var: 1vh;
