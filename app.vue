@@ -508,7 +508,11 @@
           <div class="rd-section-footer-end">
             <div class="rd-footer-copyright">
               <div class="rd-text-row rd-text-row-uppercase rd-headline-6">
-                © All rights reserved Universitas Ciputra 2022
+                {{
+                  baseState.viewMode === "desktop"
+                    ? "© All rights reserved Universitas Ciputra 2022"
+                    : "© All rights reserved UC 2022"
+                }}
               </div>
             </div>
           </div>
@@ -520,6 +524,8 @@
 
 <script lang="ts" setup>
   import { baseStore } from "./store/base";
+
+  const baseState = baseStore.getState();
 
   function resizeHandler(e: MediaQueryList | MediaQueryListEvent) {
     if (e.matches) baseStore.setViewMode("mobile");
@@ -992,8 +998,11 @@
         svg.rd-background-svg-2 {
           position: relative;
           height: 20vw;
-          * {
+          path {
             fill: var(--font-color);
+          }
+          circle {
+            fill: var(--font-light-color);
           }
         }
         .rd-decoration-1 {
@@ -1257,6 +1266,14 @@
     }
     @media screen and (max-width: 1024px) {
       flex-direction: column;
+      .rd-decoration-box-container {
+        display: none;
+      }
+      .rd-text-row {
+        &.rd-text-row-uppercase {
+          margin-bottom: 0.125rem;
+        }
+      }
       .rd-mouse {
         display: none;
       }
@@ -1316,6 +1333,25 @@
         .rd-gap-section {
           display: none;
         }
+        .rd-background {
+          left: 0;
+          width: calc(100vh - 3rem);
+          height: 100vw;
+          transform: rotate(90deg);
+          transform-origin: 50vw center;
+          justify-content: center;
+          .rd-background-divider {
+            height: 0.6rem;
+            width: 15vw;
+          }
+          svg.rd-background-svg-1 {
+            height: 17.5vw;
+          }
+          svg.rd-background-svg-2 {
+            height: 17.5vw;
+            margin-right: 2rem;
+          }
+        }
         .rd-introduction-section {
           width: 100vw;
           height: calc(100vh - 3rem);
@@ -1334,7 +1370,6 @@
         .rd-rundown-section {
           width: 100vw;
           height: auto;
-          padding: 1.5rem 1.5rem 0 1.5rem;
           .rd-section-data-container {
             width: 100%;
             height: auto;
@@ -1344,6 +1379,9 @@
               width: 100%;
               height: auto;
               padding: 1rem 0;
+              &:first-child {
+                padding: 0 0 1rem 0;
+              }
               &::after {
                 width: 100%;
                 bottom: 0;
@@ -1357,11 +1395,38 @@
         .rd-footer-section {
           width: 100vw;
           height: auto;
+          padding: 1.5rem 1.5rem 0 1.5rem;
+          .rd-section-body {
+            height: auto;
+            padding-top: 3rem;
+            .rd-footer-collab {
+              height: 5rem;
+            }
+            .rd-footer-support {
+              height: 10rem;
+            }
+          }
           .rd-section-footer {
+            position: relative;
+            top: 1px;
+            left: -1.5rem;
+            width: calc(100vw + 1px);
             .rd-section-footer-contact {
+              height: auto;
               padding: 1.5rem;
+              flex-direction: column;
+              align-items: flex-start;
+              .rd-footer-email,
+              .rd-footer-social {
+                height: 1.5rem;
+              }
+              .rd-footer-social {
+                margin-top: 1.5rem;
+                margin-left: 0;
+              }
             }
             .rd-section-footer-end {
+              background: var(--font-color);
               padding: 0 1.5rem;
             }
           }
@@ -1427,9 +1492,12 @@
       .rd-headline-4 {
         font-size: 0.7rem;
       }
+      .rd-headline-5 {
+        font-size: 0.625rem;
+      }
       .rd-caption-text {
         font-size: 0.55rem;
-      }  
+      }
       .rd-body-text {
         font-size: 0.6rem;
       }
