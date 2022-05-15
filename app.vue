@@ -1357,11 +1357,13 @@
         .rd-footer-section {
           width: 100vw;
           height: auto;
-          .rd-section-footer-contact {
-            padding: 1.5rem;
-          }
-          .rd-section-footer-end {
-            padding: 0 1.5rem;
+          .rd-section-footer {
+            .rd-section-footer-contact {
+              padding: 1.5rem;
+            }
+            .rd-section-footer-end {
+              padding: 0 1.5rem;
+            }
           }
         }
       }
