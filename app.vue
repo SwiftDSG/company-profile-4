@@ -36,7 +36,7 @@
         <span class="rd-register-button-title rd-caption-text">register</span>
       </button>
     </div>
-    <div class="rd-body">
+    <div ref="rdBody" class="rd-body">
       <div class="rd-background">
         <div ref="rdBackgroundOne" class="rd-background-1">
           <span class="rd-svg-wrapper">
@@ -86,24 +86,28 @@
             </span>
           </span>
         </div>
-        <div class="rd-background-2">
+        <div ref="rdBackgroundTwo" class="rd-background-2">
           <div class="rd-decoration-box-container rd-decoration-1">
             <div class="rd-decoration-box-2">
-              <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+              <rd-decoration-box-one />
             </div>
             <div class="rd-decoration-box-3">
-              <div class="rd-decoration-box"></div>
+              <rd-decoration-box-three />
             </div>
           </div>
-          <div class="rd-decoration-box-container rd-decoration-2">
-            <div class="rd-decoration-box-4">
-              <div class="rd-decoration-box-outer">
-                <div class="rd-decoration-box"></div>
-              </div>
-              <div class="rd-decoration-box-inner">
-                <div class="rd-decoration-box"></div>
-              </div>
-            </div>
+          <div class="rd-decoration-box-l rd-decoration-2">
+            <rd-decoration-box-four />
+          </div>
+        </div>
+        <div ref="rdBackgroundThree" class="rd-background-3">
+          <div class="rd-decoration-box-s rd-decoration-1">
+            <rd-decoration-box-five />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-2">
+            <rd-decoration-box-six />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-3">
+            <rd-decoration-box-two />
           </div>
         </div>
       </div>
@@ -152,6 +156,9 @@
         </div>
       </div>
       <div ref="rdAbout" class="rd-section rd-about-section">
+        <div class="rd-section-bar-container">
+          <div class="rd-section-bar"></div>
+        </div>
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             About<span
@@ -185,116 +192,77 @@
           </span>
         </div>
         <div class="rd-section-action">
-          <button class="rd-button">
-            <span class="rd-button-border"></span>
-            <span class="rd-button-title rd-caption-text">read more</span>
+          <button class="rd-button rd-init">
+            <span class="rd-button-background"></span>
+            <span class="rd-button-overlay"></span>
+            <span class="rd-button-border-container">
+              <span class="rd-button-border"></span>
+            </span>
+            <label class="rd-button-label rd-caption-text">read more</label>
           </button>
         </div>
         <div class="rd-section-decoration">
-          <div class="rd-decoration-box-1">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-2">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
           </div>
-          <div class="rd-decoration-box-3">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-1">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-2">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-3">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
           </div>
-          <div class="rd-decoration-box-1">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-2">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-3">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-1">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-2">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
           </div>
-          <div class="rd-decoration-box-3">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
           </div>
         </div>
       </div>
       <div class="rd-gap-section"></div>
       <div ref="rdRundown" class="rd-section rd-rundown-section">
+        <div class="rd-section-bar-container">
+          <div class="rd-section-bar"></div>
+        </div>
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             Rundown<span
@@ -447,38 +415,31 @@
           </div>
         </div>
         <div class="rd-section-decoration">
-          <div class="rd-decoration-box-0">
-            <div v-for="n in 20" :key="n" class="rd-decoration-box"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-1">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
           </div>
-          <div class="rd-decoration-box-2">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-3">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
           </div>
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
-              <div class="rd-decoration-box"></div>
-            </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
-            </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
           </div>
         </div>
       </div>
       <div class="rd-gap-section"></div>
       <div ref="rdFooter" class="rd-section rd-footer-section">
+        <div class="rd-section-bar-container">
+          <div class="rd-section-bar"></div>
+        </div>
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             Thank you<span
@@ -558,17 +519,25 @@
 </template>
 
 <script lang="ts" setup>
+  import { ComputedRef } from "vue"
   import { gsap } from 'gsap'
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
+  import Scrollbar from "smooth-scrollbar"
 
   import { baseStore } from "./store/base";
 
   const baseState = baseStore.getState();
 
+  const rdBody = ref<HTMLDivElement>(null)
   const rdBackgroundOne = ref<HTMLDivElement>(null)
+  const rdBackgroundTwo = ref<HTMLDivElement>(null)
+  const rdBackgroundThree = ref<HTMLDivElement>(null)
   const rdIntroduction = ref<HTMLDivElement>(null)
   const rdAbout = ref<HTMLDivElement>(null)
   const rdRundown = ref<HTMLDivElement>(null)
   const rdFooter = ref<HTMLDivElement>(null)
+
+  const rem: ComputedRef<number> = computed((): number => typeof getComputedStyle === 'function' ? parseInt(getComputedStyle(document.body).fontSize) : 0)
 
   const aboutContent = {
     title: ['Sustainable Business', 'Through Digitalization'],
@@ -595,18 +564,18 @@
       tl.to(rdSvgContainer, {
         y: 0,
         duration: 0.5,
-        ease: "power2.out",
+        ease: "power2.inOut",
         stagger: 0.25
       }).to(rdSvg, {
         y: 0,
         duration: 0.5,
-        ease: "power2.out",
+        ease: "power2.inOut",
         stagger: 0.25
       }, "<0").to(rdDivider, {
         scaleX: 1,
         duration: 0.5,
-        ease: "power2.out"
-      }, "<0")
+        ease: "power2.inOut"
+      }, "<0.25")
 
       return tl
     },
@@ -635,7 +604,15 @@
       return tl
     },
     aboutInit(rdAbout: Element): GSAPTimeline {
-      const tl: GSAPTimeline = gsap.timeline({ paused: true })
+      const tl: GSAPTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: rdAbout,
+          start: 'left 80%'
+        },
+        onComplete() {
+          rdButton.classList.remove('rd-init')
+        },
+      })
 
       const rdTextContainer: Element[] = gsap.utils.toArray(
         rdAbout.querySelectorAll(".rd-text-container")
@@ -649,6 +626,12 @@
       const rdWord: Element[] = gsap.utils.toArray(
         rdAbout.querySelectorAll(".rd-word")
       );
+      const rdButton: Element = rdAbout.querySelector('button.rd-button')
+      const rdButtonBackground: Element = rdButton.children[0]
+      const rdButtonOverlay: Element = rdButton.children[1]
+      const rdButtonBorder: Element = rdButton.children[2].children[0]
+      const rdButtonLabel: Element = rdButton.children[3]
+
 
       tl.to(rdTextContainer, {
         y: 0,
@@ -670,16 +653,56 @@
         duration: 0.25,
         ease: "power2.out",
         stagger: 0.005
-      }, "<0")
+      }, "<0").to(rdButtonBackground, {
+        height: '100%',
+        duration: 0.25,
+        ease: "power2.out"
+      }).to(rdButtonBackground, {
+        width: '100%',
+        duration: 0.5,
+        ease: "power2.out"
+      }).to(rdButtonOverlay, {
+        width: '100%',
+        duration: 0.5,
+        ease: "power2.out"
+      }, "<0.25").to(rdButtonBorder, {
+        x: 0,
+        duration: 0.25,
+        ease: 'power2.out'
+      }, "<0.25").to(rdButtonLabel, {
+        opacity: 1,
+        duration: 0.25
+      })
 
       return tl
     }
   }
 
+  class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
+    static pluginName = "horizontalScroll";
+
+    transformDelta(delta, fromEvent) {
+      if (!/wheel/.test(fromEvent.type))
+        return delta;
+
+      const { x, y } = delta;
+      return {
+        y: 0,
+        x: Math.abs(x) > Math.abs(y) ? x : y
+      };
+    }
+  }
+
+
   function resizeHandler(e: MediaQueryList | MediaQueryListEvent) {
     if (e.matches) baseStore.setViewMode("mobile");
     else baseStore.setViewMode("desktop");
   }
+
+  onBeforeMount(async () => {
+    gsap.registerPlugin(ScrollTrigger);
+    await baseStore.init();
+  });
 
   onMounted(() => {
     const event = new Event("resize");
@@ -693,19 +716,98 @@
     mediaQuery.addEventListener("change", resizeHandler);
     resizeHandler(mediaQuery);
 
-    const introductionInitTl = animate.introductionInit(rdIntroduction.value)
-    const aboutInitTl = animate.aboutInit(rdAbout.value)
-    const backgroundInitTl = animate.backgroundInit(rdBackgroundOne.value, () => {
-      introductionInitTl.play()
-      setTimeout(() => {
-        aboutInitTl.play()
-      }, 3000)
+    if (baseState.viewMode === 'desktop') {
+      Scrollbar.use(HorizontalScrollPlugin)
+  
+      const bodyScrollbar: Scrollbar = Scrollbar.init(rdBody.value);
+      bodyScrollbar.setPosition(0, 0);
+      bodyScrollbar.track.yAxis.element.remove();
+
+      ScrollTrigger.scrollerProxy(rdBody.value, {
+        scrollTop(value) {
+          if (arguments.length) bodyScrollbar.scrollTop = value
+          return bodyScrollbar.scrollTop
+        },
+        scrollLeft(value) {
+          if (arguments.length) bodyScrollbar.scrollLeft = value;
+          return bodyScrollbar.scrollLeft;
+        }
+      });
+      ScrollTrigger.defaults({
+        scroller: rdBody.value,
+        horizontal: true
+      })
+
+      bodyScrollbar.addListener(ScrollTrigger.update);
+    }
+
+    gsap.utils.toArray(rdBody.value.querySelectorAll('.rd-section-caption')).forEach((el: Element) => {
+      ScrollTrigger.create({
+        trigger: el,
+        // start: `right ${window.innerWidth - 6 * rem.value}`,
+        start: 'right right',
+        endTrigger: el.parentElement,
+        end: 'right right',
+        pin: true,
+      })
     })
+
+    // ScrollTrigger.create({
+    //   trigger: rdIntroduction.value,
+    //   start: 'left left',
+    //   endTrigger: rdFooter.value,
+    //   end: 'right right',
+    //   pin: rdBackgroundOne.value,
+    //   scrub: 1
+    // })
+
+    gsap.to(rdBackgroundOne.value, {
+      x: rdFooter.value.getBoundingClientRect().left - 6 * rem.value - rdBackgroundOne.value.getBoundingClientRect().right,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: rdIntroduction.value,
+        start: 'left left',
+        endTrigger: rdFooter.value,
+        end: 'right right',
+        scrub: 1
+      }
+    })
+    gsap.to(rdBackgroundTwo.value, {
+      x: '20vw',
+      scrollTrigger: {
+        trigger: rdIntroduction.value,
+        // start: `left ${3 * rem.value}`,
+        start: 'left left',
+        end: 'right left',
+        scrub: 0.5
+      }
+    })
+    gsap.to(rdBackgroundThree.value, {
+      x: '5vw',
+      scrollTrigger: {
+        trigger: rdIntroduction.value,
+        // start: `left ${3 * rem.value}`,
+        start: 'left left',
+        end: 'right left',
+        scrub: 0.5
+      }
+    })
+
+    const introductionInitTl: GSAPTimeline = animate.introductionInit(rdIntroduction.value)
+    const backgroundInitTl: GSAPTimeline = animate.backgroundInit(rdBackgroundOne.value, () => {
+      introductionInitTl.play()
+    })
+
+    animate.aboutInit(rdAbout.value)
 
     setTimeout(() => {
       backgroundInitTl.play()
     }, 1000)
   });
+
+  useHead({
+    title: 'ICOEN 9 - International Conference On Entrepreneurship'
+  })
 </script>
 
 <style lang="scss" scoped>
@@ -715,134 +817,19 @@
     height: 100vh;
     height: calc((var(--vh, 1vh) * 100));
     background: var(--primary-color);
-    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    .rd-decoration-box-1 {
+
+    .rd-decoration-box-l {
       width: 5rem;
       height: 5rem;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      .rd-decoration-stripe {
-        position: relative;
-        width: 100%;
-        height: 0.5rem;
-        background: var(--font-color);
-      }
     }
-    .rd-decoration-box-2 {
-      width: 5rem;
-      height: 5rem;
+    .rd-decoration-box-s {
+      width: 3rem;
+      height: 3rem;
       overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      .rd-decoration-stripe {
-        position: relative;
-        width: 0.5rem;
-        height: 100%;
-        background: var(--font-color);
-      }
-    }
-    .rd-decoration-box-3 {
-      width: 5rem;
-      height: 5rem;
-      overflow: hidden;
-      .rd-decoration-box {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: var(--font-color);
-      }
-    }
-    .rd-decoration-box-4 {
-      width: 5rem;
-      height: 5rem;
-      overflow: hidden;
-      .rd-decoration-box-outer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        .rd-decoration-box {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          border: 1rem solid var(--font-color);
-          box-sizing: border-box;
-        }
-      }
-      .rd-decoration-box-inner {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        width: 2rem;
-        height: 2rem;
-        overflow: hidden;
-        .rd-decoration-box {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          background: var(--font-light-color);
-        }
-      }
-    }
-    .rd-decoration-box-5 {
-      width: 5rem;
-      height: 5rem;
-      overflow: hidden;
-      gap: 0.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      .rd-decoration-box {
-        position: relative;
-        width: 0.875rem;
-        height: 0.875rem;
-        background: var(--primary-color);
-      }
-    }
-    .rd-decoration-box-6 {
-      width: 5rem;
-      height: 5rem;
-      overflow: hidden;
-      .rd-decoration-box-outer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        .rd-decoration-box {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          border: 1rem solid var(--font-color);
-          box-sizing: border-box;
-        }
-      }
-      .rd-decoration-box-inner {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        width: 2rem;
-        height: 2rem;
-        overflow: hidden;
-        gap: 0.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        .rd-decoration-box {
-          position: relative;
-          width: 0.75rem;
-          height: 0.75rem;
-          background: var(--primary-color);
-        }
-      }
     }
     .rd-decoration-box-container {
       width: 10rem;
@@ -851,21 +838,29 @@
         position: absolute;
         top: 0;
         left: 0;
+        width: 5rem;
+        height: 5rem;
       }
       .rd-decoration-box-2 {
         position: absolute;
         top: 0;
         right: 0;
+        width: 5rem;
+        height: 5rem;
       }
       .rd-decoration-box-3 {
         position: absolute;
         bottom: 0;
         left: 0;
+        width: 5rem;
+        height: 5rem;
       }
       .rd-decoration-box-4 {
         position: absolute;
         bottom: 0;
         right: 0;
+        width: 5rem;
+        height: 5rem;
       }
     }
     .rd-text-row {
@@ -1020,7 +1015,6 @@
       width: calc(100% - 3rem);
       height: 100%;
       margin-left: 3rem;
-      overflow-x: scroll;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
@@ -1032,6 +1026,7 @@
         border-left: 3px solid var(--font-color);
         border-right: 3px solid var(--font-color);
         box-sizing: border-box;
+        overflow: hidden;
         &:last-child {
           border-right: none;
         }
@@ -1046,124 +1041,21 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        .rd-decoration-box-0 {
+      }
+      .rd-section-bar-container {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        width: calc(100% - 6rem);
+        height: 0.75rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .rd-section-bar {
           position: relative;
-          width: 3rem;
-          height: 3rem;
-          overflow: hidden;
-          gap: 0.3rem;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: flex-start;
-          .rd-decoration-box {
-            position: relative;
-            width: 0.525rem;
-            height: 0.525rem;
-            background: var(--primary-color);
-          }
-        }
-        .rd-decoration-box-1 {
-          position: relative;
-          width: 3rem;
-          height: 3rem;
-          overflow: hidden;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          .rd-decoration-stripe {
-            position: relative;
-            width: 0.3rem;
-            height: 100%;
-            background: var(--primary-color);
-          }
-        }
-        .rd-decoration-box-2 {
-          position: relative;
-          width: 3rem;
-          height: 3rem;
-          overflow: hidden;
-          .rd-decoration-box-outer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            .rd-decoration-box {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              border: 0.6rem solid var(--font-color);
-              box-sizing: border-box;
-            }
-          }
-          .rd-decoration-box-inner {
-            position: absolute;
-            top: 0.9rem;
-            left: 0.9rem;
-            width: 1.2rem;
-            height: 1.2rem;
-            overflow: hidden;
-            gap: 0.3rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-            .rd-decoration-box {
-              position: relative;
-              width: 0.45rem;
-              height: 0.45rem;
-              background: var(--primary-color);
-            }
-          }
-        }
-        .rd-decoration-box-3 {
-          position: relative;
-          width: 3rem;
-          height: 3rem;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
-          .rd-decoration-stripe {
-            position: relative;
-            width: 100%;
-            height: 0.3rem;
-            background: var(--primary-color);
-          }
-        }
-        .rd-decoration-box-4 {
-          position: relative;
-          width: 3rem;
-          height: 3rem;
-          overflow: hidden;
-          .rd-decoration-box-outer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            .rd-decoration-box {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              border: 0.6rem solid var(--font-color);
-              box-sizing: border-box;
-            }
-          }
-          .rd-decoration-box-inner {
-            position: absolute;
-            top: 0.9rem;
-            left: 0.9rem;
-            width: 1.2rem;
-            height: 1.2rem;
-            overflow: hidden;
-            .rd-decoration-box {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              background: var(--primary-color);
-            }
-          }
+          width: 100%;
+          height: 0.125rem;
+          background: var(--font-color);
         }
       }
       .rd-date,
@@ -1175,24 +1067,90 @@
         justify-content: flex-end;
         align-items: flex-start;
       }
+      .rd-section-caption {
+        right: auto;
+        left: 2rem;
+        background: var(--font-light-color);
+        padding: 0 3rem 0 1rem;
+      }
       button.rd-button {
         cursor: pointer;
         height: 2rem;
-        padding-right: 1rem;
-        background: var(--font-color);
+        padding: 0 3rem 0 1rem;
+        background: none;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        span.rd-button-border {
-          position: relative;
-          width: 0.25rem;
+        span.rd-button-background {
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
           height: 100%;
-          margin-right: 0.75rem;
           background: var(--primary-color);
         }
-        span.rd-button-title {
+        span.rd-button-overlay {
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--font-color);
+        }
+        span.rd-button-border-container {
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          span.rd-button-border {
+            pointer-events: none;
+            position: relative;
+            width: 0.25rem;
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+          }
+        }
+        label.rd-button-label {
+          pointer-events: none;
           position: relative;
           color: var(--font-light-color);
+          transition: transform 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+        }
+        &.rd-init {
+          span.rd-button-background {
+            width: 0.25rem;
+            height: 0;
+          }
+          span.rd-button-overlay {
+            width: 0;
+            height: 100%;
+          }
+          span.rd-button-border {
+            transform: translateX(-100%);
+            transition: none;
+          }
+          label.rd-button-label {
+            opacity: 0;
+            transition: none;
+          }
+        }
+        &:hover:not(.rd-init) {
+          span.rd-button-border {
+            width: 100% !important;
+          }
+          label.rd-button-label {
+            transform: translateX(1rem) !important;
+          }
         }
       }
       .rd-background {
@@ -1239,15 +1197,45 @@
             }
           }
         }
-        .rd-decoration-1 {
+        .rd-background-2 {
           position: absolute;
           top: 0;
           left: 0;
+          width: calc(100vw - 3rem);
+          height: 100%;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            left: 40rem;
+            bottom: 3rem;
+          }
         }
-        .rd-decoration-2 {
+        .rd-background-3 {
           position: absolute;
-          left: 40rem;
-          bottom: 3rem;
+          top: 0;
+          left: 0;
+          opacity: 0.75;
+          width: calc(100vw - 3rem);
+          height: 100%;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 3rem;
+            left: 44rem;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            top: 6rem;
+            left: 47rem;
+          }
+          .rd-decoration-3 {
+            position: absolute;
+            bottom: 12rem;
+            left: 24rem;
+          }
         }
       }
       .rd-gap-section {
@@ -1372,6 +1360,9 @@
               height: 1.5px;
               background: var(--font-color);
               opacity: 0.125;
+            }
+            &:nth-child(3n)::after {
+              display: none;
             }
           }
         }
@@ -1628,6 +1619,9 @@
                 width: 100%;
                 bottom: 0;
               }
+              &:nth-child(3n)::after {
+                display: block;
+              }  
               &:last-child::after {
                 display: none;
               }
@@ -1921,6 +1915,51 @@
         object-fit: cover;
         transform: scale(1.25);
       }
+    }
+  }
+
+  .rd-layout {
+    .scroll-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .rd-layout .scrollbar-track.scrollbar-track {
+    height: 8px;
+    opacity: 0;
+    background: rgba(#fff, 0);
+    &:hover,
+    &.show {
+      opacity: 1;
+    }
+    &.show > .scrollbar-thumb::before {
+      opacity: 1;
+    }
+  }
+  .rd-layout .scrollbar-track.scrollbar-track > .scrollbar-thumb {
+    background: transparent;
+    cursor: grab;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--font-color);
+      opacity: 0.5;
+      transition: opacity 0.25s;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+    &:active {
+      cursor: grabbing;
     }
   }
 </style>
