@@ -38,84 +38,120 @@
     </div>
     <div class="rd-body">
       <div class="rd-background">
-        <svg
-          class="rd-background-svg-1"
-          viewBox="0 0 672 373"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M621.308 7H671.996V186.2H621.308V7ZM552.188 186.2H501.5V7H552.188V186.2ZM624.892 116.312H548.604V74.328H624.892V116.312Z"
-          />
-          <path
-            d="M374.04 186.2V47.192H319V7H479.512V47.192H424.728V186.2H374.04Z"
-          />
-          <path
-            d="M141.008 0C174.8 0 203.984 6.65601 228.56 19.968C253.477 33.28 272.763 53.0773 286.416 79.36C300.411 105.301 307.408 137.728 307.408 176.64C307.408 218.283 299.216 253.781 282.832 283.136C266.789 312.149 244.432 334.336 215.76 349.696C187.429 365.056 154.32 372.736 116.432 372.736C96.6346 372.736 77.52 370.347 59.088 365.568C40.656 361.131 24.784 354.816 11.472 346.624L48.336 273.92C58.576 281.088 69.1573 286.037 80.08 288.768C91.344 291.157 102.779 292.352 114.384 292.352C142.032 292.352 164.048 283.989 180.432 267.264C196.816 250.539 205.008 226.133 205.008 194.048C205.008 188.245 205.008 182.272 205.008 176.128C205.008 169.643 204.496 163.157 203.472 156.672L228.56 177.664C222.416 190.293 214.395 200.875 204.496 209.408C194.597 217.941 182.992 224.427 169.68 228.864C156.368 233.301 141.179 235.52 124.112 235.52C101.584 235.52 80.9333 230.912 62.16 221.696C43.728 212.139 28.88 198.997 17.616 182.272C6.35197 165.205 0.719971 145.237 0.719971 122.368C0.719971 97.4507 7.03464 75.9467 19.664 57.856C32.2933 39.424 49.1893 25.2587 70.352 15.36C91.5146 5.12001 115.067 0 141.008 0ZM147.664 72.192C138.107 72.192 129.744 74.0693 122.576 77.824C115.408 81.5787 109.605 86.8694 105.168 93.696C101.072 100.181 99.024 108.203 99.024 117.76C99.024 131.413 103.461 142.336 112.336 150.528C121.552 158.72 133.499 162.816 148.176 162.816C158.075 162.816 166.779 160.939 174.288 157.184C181.797 153.429 187.6 148.139 191.696 141.312C195.792 134.485 197.84 126.464 197.84 117.248C197.84 108.373 195.792 100.693 191.696 94.208C187.6 87.3813 181.797 82.0907 174.288 78.336C166.779 74.24 157.904 72.192 147.664 72.192Z"
-          />
-        </svg>
-        <div class="rd-background-divider"></div>
-        <svg
-          class="rd-background-svg-2"
-          viewBox="0 0 1587 373"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"
-          />
-          <circle cx="683.37" cy="186.37" r="79.4279" />
-          <path d="M0 365.4V7H101.376V365.4H0Z" />
-          <path
-            d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"
-          />
-          <path
-            d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"
-          />
-          <path
-            d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"
-          />
-        </svg>
-        <div class="rd-decoration-box-container rd-decoration-1">
-          <div class="rd-decoration-box-2">
-            <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
-          </div>
-          <div class="rd-decoration-box-3">
-            <div class="rd-decoration-box"></div>
-          </div>
+        <div ref="rdBackgroundOne" class="rd-background-1">
+          <span class="rd-svg-wrapper">
+            <span class="rd-svg-container rd-svg-container-down">
+              <svg
+                class="rd-background-svg-1 rd-svg"
+                viewBox="0 0 672 373"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M621.308 7H671.996V186.2H621.308V7ZM552.188 186.2H501.5V7H552.188V186.2ZM624.892 116.312H548.604V74.328H624.892V116.312Z"
+                />
+                <path
+                  d="M374.04 186.2V47.192H319V7H479.512V47.192H424.728V186.2H374.04Z"
+                />
+                <path
+                  d="M141.008 0C174.8 0 203.984 6.65601 228.56 19.968C253.477 33.28 272.763 53.0773 286.416 79.36C300.411 105.301 307.408 137.728 307.408 176.64C307.408 218.283 299.216 253.781 282.832 283.136C266.789 312.149 244.432 334.336 215.76 349.696C187.429 365.056 154.32 372.736 116.432 372.736C96.6346 372.736 77.52 370.347 59.088 365.568C40.656 361.131 24.784 354.816 11.472 346.624L48.336 273.92C58.576 281.088 69.1573 286.037 80.08 288.768C91.344 291.157 102.779 292.352 114.384 292.352C142.032 292.352 164.048 283.989 180.432 267.264C196.816 250.539 205.008 226.133 205.008 194.048C205.008 188.245 205.008 182.272 205.008 176.128C205.008 169.643 204.496 163.157 203.472 156.672L228.56 177.664C222.416 190.293 214.395 200.875 204.496 209.408C194.597 217.941 182.992 224.427 169.68 228.864C156.368 233.301 141.179 235.52 124.112 235.52C101.584 235.52 80.9333 230.912 62.16 221.696C43.728 212.139 28.88 198.997 17.616 182.272C6.35197 165.205 0.719971 145.237 0.719971 122.368C0.719971 97.4507 7.03464 75.9467 19.664 57.856C32.2933 39.424 49.1893 25.2587 70.352 15.36C91.5146 5.12001 115.067 0 141.008 0ZM147.664 72.192C138.107 72.192 129.744 74.0693 122.576 77.824C115.408 81.5787 109.605 86.8694 105.168 93.696C101.072 100.181 99.024 108.203 99.024 117.76C99.024 131.413 103.461 142.336 112.336 150.528C121.552 158.72 133.499 162.816 148.176 162.816C158.075 162.816 166.779 160.939 174.288 157.184C181.797 153.429 187.6 148.139 191.696 141.312C195.792 134.485 197.84 126.464 197.84 117.248C197.84 108.373 195.792 100.693 191.696 94.208C187.6 87.3813 181.797 82.0907 174.288 78.336C166.779 74.24 157.904 72.192 147.664 72.192Z"
+                />
+              </svg>
+            </span>
+          </span>
+          <div class="rd-background-divider"></div>
+          <span class="rd-svg-wrapper">
+            <span class="rd-svg-container rd-svg-container-down">
+              <svg
+                class="rd-background-svg-2 rd-svg"
+                viewBox="0 0 1587 373"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M683.37 372.74C786.299 372.74 869.74 289.299 869.74 186.37C869.74 83.4407 786.299 0 683.37 0C580.441 0 497 83.4407 497 186.37C497 289.299 580.441 372.74 683.37 372.74ZM682.851 280.334C734.459 280.334 776.295 238.497 776.295 186.889C776.295 135.281 734.459 93.4446 682.851 93.4446C631.243 93.4446 589.406 135.281 589.406 186.889C589.406 238.497 631.243 280.334 682.851 280.334Z"
+                />
+                <circle cx="683.37" cy="186.37" r="79.4279" />
+                <path d="M0 365.4V7H101.376V365.4H0Z" />
+                <path
+                  d="M1007.18 145.752H1173.58V221.528H1007.18V145.752ZM1014.35 287.064H1201.74V365.4H914V7H1195.09V85.336H1014.35V287.064Z"
+                />
+                <path
+                  d="M1246 365.4V7H1329.46L1527.09 245.592H1487.66V7H1586.99V365.4H1503.54L1305.9 126.808H1345.33V365.4H1246Z"
+                />
+                <path
+                  d="M343.12 372.736C314.789 372.736 288.507 368.299 264.272 359.424C240.379 350.208 219.557 337.237 201.808 320.512C184.4 303.787 170.747 284.16 160.848 261.632C150.949 238.763 146 213.675 146 186.368C146 159.061 150.949 134.144 160.848 111.616C170.747 88.7467 184.4 68.9493 201.808 52.224C219.557 35.4987 240.379 22.6987 264.272 13.824C288.507 4.608 314.789 0 343.12 0C376.229 0 405.755 5.80267 431.696 17.408C457.979 29.0133 479.824 45.7387 497.232 67.584L432.72 125.952C421.115 112.299 408.315 101.888 394.32 94.72C380.667 87.552 365.307 83.968 348.24 83.968C333.563 83.968 320.08 86.3574 307.792 91.136C295.504 95.9147 284.923 102.912 276.048 112.128C267.515 121.003 260.688 131.755 255.568 144.384C250.789 157.013 248.4 171.008 248.4 186.368C248.4 201.728 250.789 215.723 255.568 228.352C260.688 240.981 267.515 251.904 276.048 261.12C284.923 269.995 295.504 276.821 307.792 281.6C320.08 286.379 333.563 288.768 348.24 288.768C365.307 288.768 380.667 285.184 394.32 278.016C408.315 270.848 421.115 260.437 432.72 246.784L497.232 305.152C479.824 326.656 457.979 343.381 431.696 355.328C405.755 366.933 376.229 372.736 343.12 372.736Z"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
-        <div class="rd-decoration-box-container rd-decoration-2">
-          <div class="rd-decoration-box-4">
-            <div class="rd-decoration-box-outer">
+        <div class="rd-background-2">
+          <div class="rd-decoration-box-container rd-decoration-1">
+            <div class="rd-decoration-box-2">
+              <div v-for="n in 6" :key="n" class="rd-decoration-stripe"></div>
+            </div>
+            <div class="rd-decoration-box-3">
               <div class="rd-decoration-box"></div>
             </div>
-            <div class="rd-decoration-box-inner">
-              <div class="rd-decoration-box"></div>
+          </div>
+          <div class="rd-decoration-box-container rd-decoration-2">
+            <div class="rd-decoration-box-4">
+              <div class="rd-decoration-box-outer">
+                <div class="rd-decoration-box"></div>
+              </div>
+              <div class="rd-decoration-box-inner">
+                <div class="rd-decoration-box"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="rd-introduction-section">
+      <div ref="rdIntroduction" class="rd-introduction-section">
         <div class="rd-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
-            The 9<span class="rd-text-superscript rd-headline-6">th</span>
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span class="rd-text">
+                  The 9<span class="rd-text-superscript rd-headline-6">th</span>
+                </span>
+              </span>
+            </span>
           </div>
           <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
-            International Conference
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span class="rd-text">
+                  International Conference
+                </span>
+              </span>
+            </span>
           </div>
           <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
-            On Entrepreneurship 2022
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span class="rd-text">
+                  On Entrepreneurship 2022
+                </span>
+              </span>
+            </span>
           </div>
         </div>
         <div class="rd-date">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
-            <span class="rd-text-highlight">27 August</span> 2022<span
-              class="rd-text-decoration"
-            ></span>
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span class="rd-text">
+                  <span class="rd-text-highlight">27 August</span> 2022<span
+                    class="rd-text-decoration"
+                  ></span>
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </div>
-      <div class="rd-section rd-about-section">
+      <div ref="rdAbout" class="rd-section rd-about-section">
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             About<span
@@ -124,30 +160,29 @@
           </div>
         </div>
         <div class="rd-section-title">
-          <div class="rd-text-row rd-headline-2">
-            <span class="rd-text-highlight rd-text-highlight-primary"
-              >Sustainable Business</span
-            >
+          <div v-for="(title, i) in aboutContent.title" class="rd-text-row rd-headline-2">
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span v-if="i === 0" class="rd-text">
+                  <span class="rd-text-highlight rd-text-highlight-primary"
+                    >{{ title }}</span
+                  >
+                </span>
+                <span v-else class="rd-text">
+                  {{ title }}
+                </span>
+              </span>
+            </span>
           </div>
-          <div class="rd-text-row rd-headline-2">Through Digitalization</div>
         </div>
         <div class="rd-section-paragraph">
-          <div class="rd-text-row rd-body-text">
-            The Indonesian economy based on the amount of Gross Domestic Product
-            (GDP) based on current prices in the second quarter of 2019 reached
-            Rp3,963.5 trillion and at the base of constant prices reached
-            Rp2,735.2 trillion. Indonesia’s economy in the second quarter of
-            2019 compared to the second quarter of 2018 grew 5.05 percent
-            (y-on-y). From the production side, growth was driven by almost all
-            business fields, where the highest growth was achieved by Other
-            Service Business Fields which grew 10.73 percent.
-          </div>
-          <!-- <div class="rd-text-row rd-body-text">The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on</div>
-          <div class="rd-text-row rd-body-text">current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of</div>
-          <div class="rd-text-row rd-body-text">constant prices reached Rp2,735.2 trillion. Indonesia's economy in the second quarter of 2019</div>
-          <div class="rd-text-row rd-body-text">compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side,</div>
-          <div class="rd-text-row rd-body-text">growth was driven by almost all business fields, where the highest growth was achieved by Other</div>
-          <div class="rd-text-row rd-body-text">Service Business Fields which grew 10.73 percent.</div> -->
+          <span v-for="word in aboutContent.paragraph.split(' ')" class="rd-word-wrapper rd-body-text">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">
+                {{ word }}
+              </span>
+            </span>
+          </span>
         </div>
         <div class="rd-section-action">
           <button class="rd-button">
@@ -259,7 +294,7 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
-      <div class="rd-section rd-rundown-section">
+      <div ref="rdRundown" class="rd-section rd-rundown-section">
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             Rundown<span
@@ -443,7 +478,7 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
-      <div class="rd-section rd-footer-section">
+      <div ref="rdFooter" class="rd-section rd-footer-section">
         <div class="rd-section-caption">
           <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
             Thank you<span
@@ -523,9 +558,123 @@
 </template>
 
 <script lang="ts" setup>
+  import { gsap } from 'gsap'
+
   import { baseStore } from "./store/base";
 
   const baseState = baseStore.getState();
+
+  const rdBackgroundOne = ref<HTMLDivElement>(null)
+  const rdIntroduction = ref<HTMLDivElement>(null)
+  const rdAbout = ref<HTMLDivElement>(null)
+  const rdRundown = ref<HTMLDivElement>(null)
+  const rdFooter = ref<HTMLDivElement>(null)
+
+  const aboutContent = {
+    title: ['Sustainable Business', 'Through Digitalization'],
+    paragraph: 'The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.'
+  }
+
+  const animate = {
+    backgroundInit(rdBackgroundOne: Element, cb: () => void): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({
+        paused: true,
+        onComplete() {
+          if (cb) cb()
+        }
+      })
+
+      const rdSvgContainer: Element[] = gsap.utils.toArray(
+        rdBackgroundOne.querySelectorAll(".rd-svg-container")
+      );
+      const rdSvg: Element[] = gsap.utils.toArray(
+        rdBackgroundOne.querySelectorAll(".rd-svg")
+      );
+      const rdDivider: Element = rdBackgroundOne.querySelector('.rd-background-divider')
+
+      tl.to(rdSvgContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.25
+      }).to(rdSvg, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.25
+      }, "<0").to(rdDivider, {
+        scaleX: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      }, "<0")
+
+      return tl
+    },
+    introductionInit(rdIntroduction: Element): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({ paused: true })
+
+      const rdTextContainer: Element[] = gsap.utils.toArray(
+        rdIntroduction.querySelectorAll(".rd-text-container")
+      );
+      const rdText: Element[] = gsap.utils.toArray(
+        rdIntroduction.querySelectorAll(".rd-text")
+      );
+
+      tl.to(rdTextContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125
+      }).to(rdText, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125
+      }, "<0")
+
+      return tl
+    },
+    aboutInit(rdAbout: Element): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({ paused: true })
+
+      const rdTextContainer: Element[] = gsap.utils.toArray(
+        rdAbout.querySelectorAll(".rd-text-container")
+      );
+      const rdText: Element[] = gsap.utils.toArray(
+        rdAbout.querySelectorAll(".rd-text")
+      );
+      const rdWordContainer: Element[] = gsap.utils.toArray(
+        rdAbout.querySelectorAll(".rd-word-container")
+      );
+      const rdWord: Element[] = gsap.utils.toArray(
+        rdAbout.querySelectorAll(".rd-word")
+      );
+
+      tl.to(rdTextContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125
+      }).to(rdText, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125
+      }, "<0").to(rdWordContainer, {
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+        stagger: 0.005
+      }, "<0").to(rdWord, {
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+        stagger: 0.005
+      }, "<0")
+
+      return tl
+    }
+  }
 
   function resizeHandler(e: MediaQueryList | MediaQueryListEvent) {
     if (e.matches) baseStore.setViewMode("mobile");
@@ -543,6 +692,19 @@
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
     mediaQuery.addEventListener("change", resizeHandler);
     resizeHandler(mediaQuery);
+
+    const introductionInitTl = animate.introductionInit(rdIntroduction.value)
+    const aboutInitTl = animate.aboutInit(rdAbout.value)
+    const backgroundInitTl = animate.backgroundInit(rdBackgroundOne.value, () => {
+      introductionInitTl.play()
+      setTimeout(() => {
+        aboutInitTl.play()
+      }, 3000)
+    })
+
+    setTimeout(() => {
+      backgroundInitTl.play()
+    }, 1000)
   });
 </script>
 
@@ -557,6 +719,131 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    .rd-decoration-box-1 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      .rd-decoration-stripe {
+        position: relative;
+        width: 100%;
+        height: 0.5rem;
+        background: var(--font-color);
+      }
+    }
+    .rd-decoration-box-2 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .rd-decoration-stripe {
+        position: relative;
+        width: 0.5rem;
+        height: 100%;
+        background: var(--font-color);
+      }
+    }
+    .rd-decoration-box-3 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      .rd-decoration-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--font-color);
+      }
+    }
+    .rd-decoration-box-4 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      .rd-decoration-box-outer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .rd-decoration-box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border: 1rem solid var(--font-color);
+          box-sizing: border-box;
+        }
+      }
+      .rd-decoration-box-inner {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        .rd-decoration-box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: var(--font-light-color);
+        }
+      }
+    }
+    .rd-decoration-box-5 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      gap: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      .rd-decoration-box {
+        position: relative;
+        width: 0.875rem;
+        height: 0.875rem;
+        background: var(--primary-color);
+      }
+    }
+    .rd-decoration-box-6 {
+      width: 5rem;
+      height: 5rem;
+      overflow: hidden;
+      .rd-decoration-box-outer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .rd-decoration-box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border: 1rem solid var(--font-color);
+          box-sizing: border-box;
+        }
+      }
+      .rd-decoration-box-inner {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        gap: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .rd-decoration-box {
+          position: relative;
+          width: 0.75rem;
+          height: 0.75rem;
+          background: var(--primary-color);
+        }
+      }
+    }
     .rd-decoration-box-container {
       width: 10rem;
       height: 10rem;
@@ -564,85 +851,21 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 5rem;
-        height: 5rem;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        .rd-decoration-stripe {
-          position: relative;
-          width: 100%;
-          height: 0.5rem;
-          background: var(--font-color);
-        }
       }
       .rd-decoration-box-2 {
         position: absolute;
         top: 0;
         right: 0;
-        width: 5rem;
-        height: 5rem;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        .rd-decoration-stripe {
-          position: relative;
-          width: 0.5rem;
-          height: 100%;
-          background: var(--font-color);
-        }
       }
       .rd-decoration-box-3 {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 5rem;
-        height: 5rem;
-        overflow: hidden;
-        .rd-decoration-box {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          background: var(--font-color);
-        }
       }
       .rd-decoration-box-4 {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 5rem;
-        height: 5rem;
-        overflow: hidden;
-        .rd-decoration-box-outer {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          .rd-decoration-box {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border: 1rem solid var(--font-color);
-            box-sizing: border-box;
-          }
-        }
-        .rd-decoration-box-inner {
-          position: absolute;
-          top: 1.5rem;
-          left: 1.5rem;
-          width: 2rem;
-          height: 2rem;
-          overflow: hidden;
-          .rd-decoration-box {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: var(--font-light-color);
-          }
-        }
       }
     }
     .rd-text-row {
@@ -975,34 +1198,45 @@
       .rd-background {
         position: absolute;
         top: 0;
-        left: 3rem;
+        left: 0;
         height: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        .rd-background-divider {
-          position: relative;
-          width: 25vw;
-          height: 4rem;
-          // background: var(--font-color);
-          background: var(--font-light-color);
-          margin: 0 5vw;
-        }
-        svg.rd-background-svg-1 {
-          position: relative;
-          height: 20vw;
-          * {
-            fill: var(--font-color);
+        .rd-background-1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          padding-left: 3rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .rd-background-divider {
+            position: relative;
+            width: 25vw;
+            height: 4rem;
+            background: var(--font-light-color);
+            margin: 0 5vw;
+            transform: scaleX(0);
+            transform-origin: center left;
           }
-        }
-        svg.rd-background-svg-2 {
-          position: relative;
-          height: 20vw;
-          path {
-            fill: var(--font-color);
+          svg.rd-background-svg-1 {
+            position: relative;
+            height: 20vw;
+            * {
+              fill: var(--font-color);
+            }
           }
-          circle {
-            fill: var(--font-light-color);
+          svg.rd-background-svg-2 {
+            position: relative;
+            height: 20vw;
+            path {
+              fill: var(--font-color);
+            }
+            circle {
+              fill: var(--font-light-color);
+            }
           }
         }
         .rd-decoration-1 {
@@ -1066,9 +1300,12 @@
           width: 100%;
           margin-top: 2rem;
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
           justify-content: flex-start;
           align-items: flex-start;
+          span.rd-word-wrapper {
+            margin-right: 0.25rem;
+          }
         }
         .rd-section-action {
           position: relative;
@@ -1340,16 +1577,21 @@
           transform: rotate(90deg);
           transform-origin: 50vw center;
           justify-content: center;
-          .rd-background-divider {
-            height: 0.6rem;
-            width: 15vw;
-          }
-          svg.rd-background-svg-1 {
-            height: 17.5vw;
-          }
-          svg.rd-background-svg-2 {
-            height: 17.5vw;
-            margin-right: 2rem;
+          .rd-background-1 {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            .rd-background-divider {
+              height: 0.6rem;
+              width: 15vw;
+            }
+            svg.rd-background-svg-1 {
+              height: 17.5vw;
+            }
+            svg.rd-background-svg-2 {
+              height: 17.5vw;
+              margin-right: 2rem;
+            }
           }
         }
         .rd-introduction-section {
@@ -1573,5 +1815,112 @@
     line-height: 1;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
+  }
+
+  span.rd-letter-wrapper,
+  span.rd-text-wrapper,
+  span.rd-word-wrapper,
+  span.rd-image-wrapper,
+  span.rd-svg-wrapper {
+    pointer-events: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    span.rd-letter-container,
+    span.rd-text-container,
+    span.rd-word-container,
+    span.rd-image-container,
+    span.rd-svg-container {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span.rd-letter,
+      span.rd-text,
+      span.rd-word,
+      img.rd-image,
+      svg.rd-svg {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      &.rd-letter-container-up,
+      &.rd-text-container-up,
+      &.rd-word-container-up,
+      &.rd-image-container-up,
+      &.rd-svg-container-up {
+        transform: translateY(-100%);
+        span.rd-letter,
+        span.rd-text,
+        span.rd-word,
+        img.rd-image,
+        svg.rd-svg {
+          transform: translateY(100%);
+        }
+      }
+      &.rd-letter-container-down,
+      &.rd-text-container-down,
+      &.rd-word-container-down,
+      &.rd-image-container-down,
+      &.rd-svg-container-down {
+        transform: translateY(100%);
+        span.rd-letter,
+        span.rd-text,
+        span.rd-word,
+        img.rd-image,
+        svg.rd-svg {
+          transform: translateY(-100%);
+        }
+      }
+      &.rd-letter-container-left,
+      &.rd-text-container-left,
+      &.rd-word-container-left,
+      &.rd-image-container-left,
+      &.rd-svg-container-left {
+        transform: translateX(-100%);
+        span.rd-letter,
+        span.rd-text,
+        span.rd-word,
+        img.rd-image,
+        svg.rd-svg {
+          transform: translateX(100%);
+        }
+      }
+      &.rd-letter-container-right,
+      &.rd-text-container-right,
+      &.rd-word-container-right,
+      &.rd-image-container-right,
+      &.rd-svg-container-right {
+        transform: translateX(100%);
+        span.rd-letter,
+        span.rd-text,
+        span.rd-word,
+        img.rd-image,
+        svg.rd-svg {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+
+  span.rd-image-wrapper {
+    width: 100%;
+    height: 100%;
+    span.rd-image-container {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      img.rd-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.25);
+      }
+    }
   }
 </style>
