@@ -89,25 +89,44 @@
         <div ref="rdBackgroundTwo" class="rd-background-2">
           <div class="rd-decoration-box-container rd-decoration-1">
             <div class="rd-decoration-box-2">
-              <rd-decoration-box-one />
+              <rd-decoration-box-one :state="animState" />
             </div>
             <div class="rd-decoration-box-3">
-              <rd-decoration-box-three />
+              <rd-decoration-box-three :state="animState" />
             </div>
           </div>
           <div class="rd-decoration-box-l rd-decoration-2">
-            <rd-decoration-box-four />
+            <rd-decoration-box-four :state="animState" />
           </div>
         </div>
         <div ref="rdBackgroundThree" class="rd-background-3">
           <div class="rd-decoration-box-s rd-decoration-1">
-            <rd-decoration-box-five />
+            <rd-decoration-box-five :state="animState" />
           </div>
           <div class="rd-decoration-box-s rd-decoration-2">
-            <rd-decoration-box-six />
+            <rd-decoration-box-six :state="animState" />
           </div>
           <div class="rd-decoration-box-s rd-decoration-3">
+            <rd-decoration-box-two :state="animState" />
+          </div>
+        </div>
+        <div v-if="baseState.viewMode === 'desktop'" ref="rdBackgroundFour" class="rd-background-4">
+          <div class="rd-decoration-box-l rd-decoration-1">
+            <rd-decoration-box-six />
+          </div>
+          <div class="rd-decoration-box-l rd-decoration-2">
             <rd-decoration-box-two />
+          </div>
+        </div>
+        <div v-if="baseState.viewMode === 'desktop'" ref="rdBackgroundFive" class="rd-background-5">
+          <div class="rd-decoration-box-s rd-decoration-1">
+            <rd-decoration-box-three />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-2">
+            <rd-decoration-box-four />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-3">
+            <rd-decoration-box-one />
           </div>
         </div>
       </div>
@@ -146,13 +165,12 @@
             <span class="rd-text-wrapper">
               <span class="rd-text-container rd-text-container-down">
                 <span class="rd-text">
-                  <span class="rd-text-highlight">27 August</span> 2022<span
-                    class="rd-text-decoration"
-                  ></span>
+                  <span class="rd-text-highlight">27 August</span> 2022
                 </span>
               </span>
             </span>
           </div>
+          <div class="rd-text-decoration" style="opacity: 0"></div>
         </div>
       </div>
       <div ref="rdAbout" class="rd-section rd-about-section">
@@ -259,7 +277,7 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
-      <div ref="rdRundown" class="rd-section rd-rundown-section">
+      <div ref="rdRundown" class="rd-section rd-rundown-section" :style="baseState.viewMode === 'desktop' ? `width: calc((100vw - 9.25rem) * ${Math.ceil(rundownContent.datas.length / 3)} / 3 + 6rem)` : ''">
         <div class="rd-section-bar-container">
           <div class="rd-section-bar"></div>
         </div>
@@ -271,146 +289,46 @@
           </div>
         </div>
         <div class="rd-section-data-container">
-          <div class="rd-section-data">
+          <div v-for="(data, i) in rundownContent.datas" :key="i" class="rd-section-data">
             <div class="rd-section-data-time">
               <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                12:35 - 13:05 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">J.E Susanto</div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                Universitas Ciputra, Indonesia
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Welcoming Speech from the Conference Chair
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                13:05 - 14:05 WIB
+                <span class="rd-text-wrapper">
+                  <span class="rd-text-container rd-text-container-down">
+                    <span class="rd-text">
+                      {{ data.time }}
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
             <div class="rd-section-data-speaker">
               <div class="rd-text-row rd-headline-3">
-                Sandiaga Salahuddin Uno
+                <span class="rd-text-wrapper">
+                  <span class="rd-text-container rd-text-container-down">
+                    <span class="rd-text">
+                      {{ data.speaker }}
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
             <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                Minister of Tourism and Creative Economy of Indonesia
-              </div>
+              <span v-for="(word, i) in data.origin.split(' ')" :key="i" class="rd-word-wrapper rd-headline-6">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">
+                    {{ word }}
+                  </span>
+                </span>
+              </span>
             </div>
             <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Inclusive design for a digital world
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                14:05 - 14:35 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">
-                Christina Whidya Utami
-              </div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                Universitas Ciputra, Indonesia
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Enabling ethical Design
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                14:35 - 15:05 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">Tao Wang</div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                Nanjing Normal University, China
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Design with Mental Health in Mind
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                15:05 - 15:35 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">Arnold J.</div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                The University of Western, Australia
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Feminist data practices for inclusivity
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                15:35 - 16:05 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">Nilay Balkan</div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                University of Glasgow, United Kingdom
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">
-                Where do we go from here?
-              </div>
-            </div>
-          </div>
-          <div class="rd-section-data">
-            <div class="rd-section-data-time">
-              <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
-                16:05 - 16:15 WIB
-              </div>
-            </div>
-            <div class="rd-section-data-speaker">
-              <div class="rd-text-row rd-headline-3">J.E Susanto</div>
-            </div>
-            <div class="rd-section-data-remark">
-              <div class="rd-text-row rd-headline-6">
-                Universitas Ciputra, Indonesia
-              </div>
-            </div>
-            <div class="rd-section-data-title">
-              <div class="rd-text-row rd-headline-5">Closing Speech</div>
+              <span v-for="(word, i) in data.title.split(' ')" :key="i" class="rd-word-wrapper rd-headline-5">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">
+                    {{ word }}
+                  </span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -515,6 +433,7 @@
         </div>
       </div>
     </div>
+    <div :style="animState !== 'init' ? 'visibility: hidden; pointer-events: none' : ''" class="rd-overlay"></div>
   </div>
 </template>
 
@@ -532,16 +451,61 @@
   const rdBackgroundOne = ref<HTMLDivElement>(null)
   const rdBackgroundTwo = ref<HTMLDivElement>(null)
   const rdBackgroundThree = ref<HTMLDivElement>(null)
+  const rdBackgroundFour = ref<HTMLDivElement>(null)
+  const rdBackgroundFive = ref<HTMLDivElement>(null)
+
   const rdIntroduction = ref<HTMLDivElement>(null)
   const rdAbout = ref<HTMLDivElement>(null)
   const rdRundown = ref<HTMLDivElement>(null)
   const rdFooter = ref<HTMLDivElement>(null)
+
+  const animState = ref<'init' | 'before-mount' | 'mounted'>('init')
 
   const rem: ComputedRef<number> = computed((): number => typeof getComputedStyle === 'function' ? parseInt(getComputedStyle(document.body).fontSize) : 0)
 
   const aboutContent = {
     title: ['Sustainable Business', 'Through Digitalization'],
     paragraph: 'The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.'
+  }
+  const rundownContent = {
+    datas: [
+      {
+        time: '12:35 - 13:05 WIB',
+        speaker: 'J.E Susanto',
+        origin: 'Universitas Ciputra, Indonesia',
+        title: 'Welcoming Speech from the Conference Chair'
+      },
+      {
+        time: '13:05 - 14:05 WIB',
+        speaker: 'Sandiaga Salahuddin Uno',
+        origin: 'Minister of Tourism and Creative Economy of Indonesia',
+        title: 'Inclusive design for a digital world'
+      },
+      {
+        time: '14:05 - 14:35 WIB',
+        speaker: 'Christina Whidya Utami',
+        origin: 'Universitas Ciputra, Indonesia',
+        title: 'Enabling ethical Design'
+      },
+      {
+        time: '14:35 - 15:05 WIB',
+        speaker: 'Tao Wang',
+        origin: 'Nanjing Normal University, China',
+        title: 'Design with Mental Health in Mind'
+      },
+      {
+        time: '15:05 - 15:35 WIB',
+        speaker: 'Arnold J.',
+        origin: 'The University of Western, Australia',
+        title: 'Feminist data practices for inclusivity'
+      },
+      {
+        time: '15:35 - 16:05 WIB',
+        speaker: 'Nilay Balkan',
+        origin: 'University of Glasgow, United Kingdom',
+        title: 'Where do we go from here?'
+      },
+    ]
   }
 
   const animate = {
@@ -588,6 +552,7 @@
       const rdText: Element[] = gsap.utils.toArray(
         rdIntroduction.querySelectorAll(".rd-text")
       );
+      const rdTextDecoration: Element = rdIntroduction.querySelector('.rd-text-decoration')
 
       tl.to(rdTextContainer, {
         y: 0,
@@ -599,15 +564,18 @@
         duration: 0.5,
         ease: "power2.out",
         stagger: 0.125
-      }, "<0")
+      }, "<0").to(rdTextDecoration, {
+        opacity: 1,
+        duration: 0.25
+      })
 
       return tl
     },
-    aboutInit(rdAbout: Element): GSAPTimeline {
+    aboutInit(mode: 'desktop' | 'mobile', rdAbout: Element): GSAPTimeline {
       const tl: GSAPTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: rdAbout,
-          start: 'left 80%'
+          start: mode === 'desktop' ? 'left 80%' : 'top 60%'
         },
         onComplete() {
           rdButton.classList.remove('rd-init')
@@ -675,33 +643,80 @@
       })
 
       return tl
+    },
+    rundownInit(mode: 'desktop' | 'mobile', rdRundown: Element): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: rdRundown,
+          start: mode === 'desktop' ? 'left 80%' : 'top 60%'
+        },
+      })
+
+      const rdTextContainer: Element[] = gsap.utils.toArray(
+        rdRundown.querySelectorAll(".rd-text-container")
+      );
+      const rdText: Element[] = gsap.utils.toArray(
+        rdRundown.querySelectorAll(".rd-text")
+      )
+      const rdWordContainer: Element[] = gsap.utils.toArray(
+        rdRundown.querySelectorAll(".rd-word-container")
+      );
+      const rdWord: Element[] = gsap.utils.toArray(
+        rdRundown.querySelectorAll(".rd-word")
+      );
+
+      tl.to(rdTextContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.1
+      }).to(rdText, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.1
+      }, "<0").to(rdWordContainer, {
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+        stagger: 0.01
+      }, "<0").to(rdWord, {
+        y: 0,
+        duration: 0.25,
+        ease: "power2.out",
+        stagger: 0.01
+      }, "<0")
+
+      return tl
     }
   }
 
   class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
     static pluginName = "horizontalScroll";
 
-    transformDelta(delta, fromEvent) {
+    transformDelta(delta: { x: number, y: number }, fromEvent: { type: string }): { x: number, y: number } {
       if (!/wheel/.test(fromEvent.type))
-        return delta;
+        return delta
 
-      const { x, y } = delta;
+      const { x, y } = delta
       return {
         y: 0,
         x: Math.abs(x) > Math.abs(y) ? x : y
-      };
+      }
     }
   }
-
 
   function resizeHandler(e: MediaQueryList | MediaQueryListEvent) {
     if (e.matches) baseStore.setViewMode("mobile");
     else baseStore.setViewMode("desktop");
   }
 
+  watch(() => baseState.viewMode, (val, oldVal) => {
+    if (val && oldVal) location.reload()
+  });
+
   onBeforeMount(async () => {
     gsap.registerPlugin(ScrollTrigger);
-    await baseStore.init();
   });
 
   onMounted(() => {
@@ -716,93 +731,135 @@
     mediaQuery.addEventListener("change", resizeHandler);
     resizeHandler(mediaQuery);
 
-    if (baseState.viewMode === 'desktop') {
-      Scrollbar.use(HorizontalScrollPlugin)
-  
-      const bodyScrollbar: Scrollbar = Scrollbar.init(rdBody.value);
-      bodyScrollbar.setPosition(0, 0);
-      bodyScrollbar.track.yAxis.element.remove();
-
-      ScrollTrigger.scrollerProxy(rdBody.value, {
-        scrollTop(value) {
-          if (arguments.length) bodyScrollbar.scrollTop = value
-          return bodyScrollbar.scrollTop
-        },
-        scrollLeft(value) {
-          if (arguments.length) bodyScrollbar.scrollLeft = value;
-          return bodyScrollbar.scrollLeft;
-        }
-      });
-      ScrollTrigger.defaults({
-        scroller: rdBody.value,
-        horizontal: true
-      })
-
-      bodyScrollbar.addListener(ScrollTrigger.update);
-    }
-
-    gsap.utils.toArray(rdBody.value.querySelectorAll('.rd-section-caption')).forEach((el: Element) => {
-      ScrollTrigger.create({
-        trigger: el,
-        // start: `right ${window.innerWidth - 6 * rem.value}`,
-        start: 'right right',
-        endTrigger: el.parentElement,
-        end: 'right right',
-        pin: true,
-      })
-    })
-
-    // ScrollTrigger.create({
-    //   trigger: rdIntroduction.value,
-    //   start: 'left left',
-    //   endTrigger: rdFooter.value,
-    //   end: 'right right',
-    //   pin: rdBackgroundOne.value,
-    //   scrub: 1
-    // })
-
-    gsap.to(rdBackgroundOne.value, {
-      x: rdFooter.value.getBoundingClientRect().left - 6 * rem.value - rdBackgroundOne.value.getBoundingClientRect().right,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: rdIntroduction.value,
-        start: 'left left',
-        endTrigger: rdFooter.value,
-        end: 'right right',
-        scrub: 1
-      }
-    })
-    gsap.to(rdBackgroundTwo.value, {
-      x: '20vw',
-      scrollTrigger: {
-        trigger: rdIntroduction.value,
-        // start: `left ${3 * rem.value}`,
-        start: 'left left',
-        end: 'right left',
-        scrub: 0.5
-      }
-    })
-    gsap.to(rdBackgroundThree.value, {
-      x: '5vw',
-      scrollTrigger: {
-        trigger: rdIntroduction.value,
-        // start: `left ${3 * rem.value}`,
-        start: 'left left',
-        end: 'right left',
-        scrub: 0.5
-      }
-    })
-
-    const introductionInitTl: GSAPTimeline = animate.introductionInit(rdIntroduction.value)
-    const backgroundInitTl: GSAPTimeline = animate.backgroundInit(rdBackgroundOne.value, () => {
-      introductionInitTl.play()
-    })
-
-    animate.aboutInit(rdAbout.value)
-
     setTimeout(() => {
-      backgroundInitTl.play()
-    }, 1000)
+      
+      if (baseState.viewMode === 'desktop') {
+        Scrollbar.use(HorizontalScrollPlugin)
+    
+        const bodyScrollbar: Scrollbar = Scrollbar.init(rdBody.value);
+        bodyScrollbar.setPosition(0, 0);
+        bodyScrollbar.track.yAxis.element.remove();
+  
+        ScrollTrigger.scrollerProxy(rdBody.value, {
+          scrollTop(value) {
+            if (arguments.length) bodyScrollbar.scrollTop = value
+            return bodyScrollbar.scrollTop
+          },
+          scrollLeft(value) {
+            if (arguments.length) bodyScrollbar.scrollLeft = value;
+            return bodyScrollbar.scrollLeft;
+          }
+        });
+        ScrollTrigger.defaults({
+          scroller: rdBody.value,
+          horizontal: true
+        })
+  
+        bodyScrollbar.addListener(ScrollTrigger.update);
+  
+        gsap.utils.toArray(rdBody.value.querySelectorAll('.rd-section-caption')).forEach((el: Element) => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'right right',
+            endTrigger: el.parentElement,
+            end: 'right right',
+            pin: true,
+          })
+        })
+    
+        gsap.to(rdBackgroundOne.value, {
+          x: rdFooter.value.getBoundingClientRect().left - 6 * rem.value - rdBackgroundOne.value.getBoundingClientRect().right,
+          ease: 'power1.inOut',
+          scrollTrigger: {
+            trigger: rdIntroduction.value,
+            start: 'left left',
+            endTrigger: rdFooter.value,
+            end: 'right right',
+            scrub: 1
+          }
+        })
+        gsap.to(rdBackgroundTwo.value, {
+          x: '-20vw',
+          scrollTrigger: {
+            trigger: rdIntroduction.value,
+            start: 'left left',
+            end: 'right left',
+            scrub: 0.5
+          }
+        })
+        gsap.to(rdBackgroundThree.value, {
+          x: '-5vw',
+          scrollTrigger: {
+            trigger: rdIntroduction.value,
+            start: 'left left',
+            end: 'right left',
+            scrub: 0.5
+          }
+        })
+        gsap.to(rdBackgroundFour.value, {
+          x: '-20vw',
+          scrollTrigger: {
+            trigger: rdAbout.value,
+            start: 'right right',
+            endTrigger: rdRundown.value,
+            end: 'left left',
+            scrub: 0.5
+          }
+        })
+        gsap.to(rdBackgroundFive.value, {
+          x: '-5vw',
+          scrollTrigger: {
+            trigger: rdAbout.value,
+            start: 'right right',
+            endTrigger: rdRundown.value,
+            end: 'left left',
+            scrub: 0.5
+          }
+        })
+      } else {
+        ScrollTrigger.defaults({
+          scroller: rdBody.value
+        })
+      }
+  
+      const introductionInitTl: GSAPTimeline = animate.introductionInit(rdIntroduction.value)
+      const backgroundInitTl: GSAPTimeline = animate.backgroundInit(rdBackgroundOne.value, () => {
+        animState.value = 'mounted'
+        introductionInitTl.play()
+      })
+  
+      animate.aboutInit(baseState.viewMode, rdAbout.value)
+      animate.rundownInit(baseState.viewMode, rdRundown.value)
+  
+      // let r = 56
+      // let g = 197
+      // let b = 119
+
+      // let r = 255
+      // let g = 0
+      // let b = 0
+  
+      // setInterval(function(){
+      //   if(r > 0 && b == 0){
+      //     r--
+      //     g++
+      //   }
+      //   if(g > 0 && r == 0){
+      //     g--
+      //     b++
+      //   }
+      //   if(b > 0 && g == 0){
+      //     r++
+      //     b--
+      //   }
+      //   document.documentElement.style.setProperty("--primary-color", `rgb(${r}, ${g}, ${b})`);
+      // }, 10)
+  
+      setTimeout(() => {
+        animState.value = 'before-mount'
+        backgroundInitTl.play()
+      }, 1000)
+    }, 100)
   });
 
   useHead({
@@ -820,7 +877,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-
     .rd-decoration-box-l {
       width: 5rem;
       height: 5rem;
@@ -880,24 +936,24 @@
           color: var(--primary-color);
         }
       }
-      .rd-text-decoration {
-        position: absolute;
-        top: -0.5rem;
-        right: -0.5rem;
-        width: 0.5rem;
-        height: 0.5rem;
-        background: var(--font-light-color);
-        &.rd-text-decoration-primary {
-          background: var(--primary-color);
-        }
-      }
       &.rd-text-row-uppercase {
-        line-height: 0.75;
+        line-height: 0.8;
         text-transform: uppercase;
         margin-bottom: 0.25rem;
         &:last-child {
           margin-bottom: 0;
         }
+      }
+    }
+    .rd-text-decoration {
+      position: absolute;
+      top: -0.5rem;
+      right: -0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--font-light-color);
+      &.rd-text-decoration-primary {
+        background: var(--primary-color);
       }
     }
     .rd-mouse {
@@ -1237,6 +1293,46 @@
             left: 24rem;
           }
         }
+        .rd-background-4 {
+          position: absolute;
+          top: 0;
+          left: 100vw;
+          width: 100%;
+          height: 100%;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 3rem;
+            left: 50vw;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 75vw;
+          }
+        }
+        .rd-background-5 {
+          position: absolute;
+          top: 0;
+          left: 100vw;
+          width: 100%;
+          height: 100%;
+          opacity: 0.75;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 4.5rem;
+            left: 75vw;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            bottom: 0;
+            left: 45vw;
+          }
+          .rd-decoration-3 {
+            position: absolute;
+            top: 1.5rem;
+            left: calc(75vw + 3rem);
+          }
+        }
       }
       .rd-gap-section {
         position: relative;
@@ -1303,7 +1399,7 @@
       }
       .rd-rundown-section {
         position: relative;
-        width: calc(100vw - 3.125rem);
+        // width: calc((100vw * 2 / 3) - (3.125rem * 2 / 3));
         height: 100%;
         background: var(--font-light-color);
         display: flex;
@@ -1343,12 +1439,25 @@
               position: relative;
               margin-top: 0.5rem;
               opacity: 0.5;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              align-items: flex-start;
+              span.rd-word-wrapper {
+                margin-right: 0.15rem;
+                line-height: 1.125;
+              }
             }
             .rd-section-data-title {
               position: relative;
               margin-top: 0.5rem;
-              .rd-text-row {
-                line-height: 1.25;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              align-items: flex-start;
+              span.rd-word-wrapper {
+                margin-right: 0.225rem;
+                line-height: 1.125;
               }
             }
             &::after {
@@ -1481,6 +1590,15 @@
         }
       }
     }
+    .rd-overlay {
+      z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 3rem;
+      width: calc(100vw - 3rem);
+      height: 100vh;
+      background: var(--primary-color);
+    }
     @keyframes rd-mouse-scroll-indicator {
       0% {
         transform: scaleY(0) translateZ(0);
@@ -1495,7 +1613,32 @@
     @media screen and (max-width: 1024px) {
       flex-direction: column;
       .rd-decoration-box-container {
-        display: none;
+        width: 6rem;
+        height: 6rem;
+        .rd-decoration-box-1 {
+          width: 3rem;
+          height: 3rem;
+        }
+        .rd-decoration-box-2 {
+          width: 3rem;
+          height: 3rem;
+        }
+        .rd-decoration-box-3 {
+          width: 3rem;
+          height: 3rem;
+        }
+        .rd-decoration-box-4 {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+      .rd-decoration-box-l {
+        width: 3rem;
+        height: 3rem;
+      }
+      .rd-decoration-box-s {
+        width: 1.5rem;
+        height: 1.5rem;
       }
       .rd-text-row {
         &.rd-text-row-uppercase {
@@ -1550,10 +1693,24 @@
           padding: 1.5rem;
           border: none;
         }
-        .rd-date,
-        .rd-section-caption {
+        .rd-date {
           top: 1.5rem !important;
           right: 1.5rem !important;
+          left: auto;
+        }
+        .rd-section-caption {
+          top: 1.5rem !important;
+          right: 0 !important;
+          padding: 0 1.5rem 0 1rem;
+          left: auto;
+          .rd-text-row {
+            line-height: 1;
+          }
+        }
+        .rd-section-bar-container {
+          top: 1.5rem;
+          left: 1.5rem;
+          height: 0.7rem;
         }
         .rd-section-decoration {
           display: none;
@@ -1563,6 +1720,7 @@
         }
         .rd-background {
           left: 0;
+          top: 0;
           width: calc(100vh - 3rem);
           height: 100vw;
           transform: rotate(90deg);
@@ -1582,6 +1740,38 @@
             svg.rd-background-svg-2 {
               height: 17.5vw;
               margin-right: 2rem;
+            }
+          }
+          .rd-background-2 {
+            width: calc(100vh - 3rem);
+            height: 100vw;
+            .rd-decoration-1 {
+              top: auto;
+              bottom: 0;
+              left: 0;
+            }
+            .rd-decoration-2 {
+              top: 1.5rem;
+              right: 12.5rem;
+              bottom: auto;
+              left: auto;
+            }
+          }
+          .rd-background-3 {
+            width: calc(100vh - 3rem);
+            height: 100vw;
+            .rd-decoration-1 {
+              top: 1.5rem;
+              left: 10rem;
+            }
+            .rd-decoration-2 {
+              top: 3rem;
+              left: 11.5rem;
+            }
+            .rd-decoration-3 {
+              bottom: 3rem;
+              right: 17.5rem;
+              left: auto;
             }
           }
         }
@@ -1667,6 +1857,15 @@
             }
           }
         }
+      }
+      .rd-overlay {
+        z-index: 2;
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 3rem);
+        background: var(--primary-color);
       }
     }
   }

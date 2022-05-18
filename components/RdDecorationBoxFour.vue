@@ -1,5 +1,5 @@
 <template>
-  <div :class="type" class="rd-decoration-box-4">
+  <div ref="rdDecorationBox" :class="type" class="rd-decoration-box-4">
     <div class="rd-decoration-box-outer">
       <div class="rd-decoration-box">
         <div class="rd-decoration-box-border-top"></div>
@@ -15,7 +15,38 @@
 </template>
 
 <script lang="ts" setup>
-  defineProps<{ type?: string }>()
+  import { gsap } from 'gsap'
+
+  const rdDecorationBox = ref<HTMLDivElement>(null)
+
+  const boxInit = ref<GSAPTimeline>(null)
+
+  const props = defineProps<{ type?: string, state?: 'init' | 'before-mount' | 'mounted' }>()
+
+  function animate(rdDecorationBox: Element): GSAPTimeline {
+    const tl = gsap.timeline({ paused: true })
+
+    tl.from(rdDecorationBox.querySelector('.rd-decoration-box-outer .rd-decoration-box'), {
+      y: '100%',
+      ease: 'power2.out',
+      duration: 0.5
+    }).from(rdDecorationBox.querySelector('.rd-decoration-box-inner .rd-decoration-box'), {
+      opacity: 0,
+      duration: 0.25
+    }, '<0.25')
+
+    return tl
+  }
+
+  watch(() => props.state, (val) => {
+    if (val === 'mounted') boxInit.value.play()
+  })
+
+  onMounted(() => {
+    if (props.state === 'init') {
+      boxInit.value = animate(rdDecorationBox.value)
+    }
+  })
 </script>
 
 <style lang="scss" scoped>
