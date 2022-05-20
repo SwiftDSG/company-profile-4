@@ -4,7 +4,11 @@
       <div class="rd-mouse-scroll"></div>
     </div>
     <div class="rd-navigation-bar" ref="rdNavBar">
-      <div ref="rdNavBtn" class="rd-navigation-button">
+      <div
+        ref="rdNavBtn"
+        class="rd-navigation-button"
+        @click="navHandler(navState)"
+      >
         <div class="rd-navigation-button-bar"></div>
         <div class="rd-navigation-button-bar"></div>
       </div>
@@ -38,49 +42,144 @@
     </div>
     <div class="rd-navigation" ref="rdNav">
       <div class="rd-navigation-links">
-        <div class="rd-navigation-link rd-headline-1">about</div>
-        <div class="rd-navigation-link rd-headline-1">rundown</div>
-        <div class="rd-navigation-link rd-headline-1">publication</div>
+        <div class="rd-navigation-link">
+          <span class="rd-word-wrapper rd-placeholder-text">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">01</span>
+            </span>
+          </span>
+          <span class="rd-word-wrapper rd-headline-1">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">about</span>
+            </span>
+          </span>
+          <span class="rd-hover-word-container rd-headline-1">
+            <span class="rd-hover-word">about</span>
+          </span>
+        </div>
+        <div class="rd-navigation-link">
+          <span class="rd-word-wrapper rd-placeholder-text">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">02</span>
+            </span>
+          </span>
+          <span class="rd-word-wrapper rd-headline-1">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">rundown</span>
+            </span>
+          </span>
+          <span class="rd-hover-word-container rd-headline-1">
+            <span class="rd-hover-word">rundown</span>
+          </span>
+        </div>
+        <div class="rd-navigation-link">
+          <span class="rd-word-wrapper rd-placeholder-text">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">03</span>
+            </span>
+          </span>
+          <span class="rd-word-wrapper rd-headline-1">
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">publication</span>
+            </span>
+          </span>
+          <span class="rd-hover-word-container rd-headline-1">
+            <span class="rd-hover-word">publication</span>
+          </span>
+        </div>
       </div>
       <div class="rd-navigation-footer">
         <div class="rd-navigation-footer-contacts">
           <div class="rd-navigation-footer-contact">
-            <div class="rd-navigation-footer-contact-placeholder rd-placeholder-text">
-              get in touch
+            <div
+              class="rd-navigation-footer-contact-placeholder rd-placeholder-text"
+            >
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">get in touch</span>
+                </span>
+              </span>
             </div>
-            <div class="rd-navigation-footer-contact-value rd-headline-3">
-              icoen@ciputra.ac.id
+            <div class="rd-navigation-footer-contact-value rd-headline-4">
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">icoen@ciputra.ac.id</span>
+                </span>
+              </span>
+              <span class="rd-hover-word-container">
+                <span class="rd-hover-word">icoen@ciputra.ac.id</span>
+              </span>
             </div>
           </div>
           <div class="rd-navigation-footer-contact">
-            <div class="rd-navigation-footer-contact-placeholder rd-placeholder-text">
-              follow us
+            <div
+              class="rd-navigation-footer-contact-placeholder rd-placeholder-text"
+            >
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">follow us</span>
+                </span>
+              </span>
             </div>
-            <div class="rd-navigation-footer-contact-values rd-headline-3">
-              <div class="rd-navigation-footer-contact-value rd-headline-3">
-                facebook
+            <div class="rd-navigation-footer-contact-values rd-headline-4">
+              <div class="rd-navigation-footer-contact-value rd-headline-4">
+                <span class="rd-word-wrapper">
+                  <span class="rd-word-container rd-word-container-down">
+                    <span class="rd-word">facebook</span>
+                  </span>
+                </span>
+                <span class="rd-hover-word-container">
+                  <span class="rd-hover-word">facebook</span>
+                </span>
               </div>
-              <div class="rd-navigation-footer-contact-value rd-headline-3">
-                twitter
+              <div class="rd-navigation-footer-contact-value rd-headline-4">
+                <span class="rd-word-wrapper">
+                  <span class="rd-word-container rd-word-container-down">
+                    <span class="rd-word">instagram</span>
+                  </span>
+                </span>
+                <span class="rd-hover-word-container">
+                  <span class="rd-hover-word">instagram</span>
+                </span>
               </div>
             </div>
           </div>
         </div>
         <div class="rd-navigation-footer-credits">
           <div class="rd-navigation-footer-credit">
-            <div class="rd-navigation-footer-credit-placeholder rd-placeholder-text">
-              hosted by
+            <div
+              class="rd-navigation-footer-credit-placeholder rd-placeholder-text"
+            >
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">hosted by</span>
+                </span>
+              </span>
             </div>
-            <div class="rd-navigation-footer-credit-value rd-headline-3">
-              Universitas Ciputra
+            <div class="rd-navigation-footer-credit-value rd-headline-4">
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">Universitas Ciputra</span>
+                </span>
+              </span>
             </div>
           </div>
           <div class="rd-navigation-footer-credit">
-            <div class="rd-navigation-footer-credit-placeholder rd-placeholder-text">
-              developed by
+            <div
+              class="rd-navigation-footer-credit-placeholder rd-placeholder-text"
+            >
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">developed by</span>
+                </span>
+              </span>
             </div>
-            <div class="rd-navigation-footer-credit-value rd-headline-3">
-              Redian Grup
+            <div class="rd-navigation-footer-credit-value rd-headline-4">
+              <span class="rd-word-wrapper">
+                <span class="rd-word-container rd-word-container-down">
+                  <span class="rd-word">Redian Grup</span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -160,7 +259,11 @@
             <rd-decoration-box-two :state="animState" />
           </div>
         </div>
-        <div v-if="baseState.viewMode === 'desktop'" ref="rdBackgroundFour" class="rd-background-4">
+        <div
+          v-if="baseState.viewMode === 'desktop'"
+          ref="rdBackgroundFour"
+          class="rd-background-4"
+        >
           <div class="rd-decoration-box-l rd-decoration-1">
             <rd-decoration-box-six />
           </div>
@@ -168,7 +271,11 @@
             <rd-decoration-box-two />
           </div>
         </div>
-        <div v-if="baseState.viewMode === 'desktop'" ref="rdBackgroundFive" class="rd-background-5">
+        <div
+          v-if="baseState.viewMode === 'desktop'"
+          ref="rdBackgroundFive"
+          class="rd-background-5"
+        >
           <div class="rd-decoration-box-s rd-decoration-1">
             <rd-decoration-box-three />
           </div>
@@ -194,18 +301,14 @@
           <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
             <span class="rd-text-wrapper">
               <span class="rd-text-container rd-text-container-down">
-                <span class="rd-text">
-                  International Conference
-                </span>
+                <span class="rd-text"> International Conference </span>
               </span>
             </span>
           </div>
           <div class="rd-text-row rd-text-row-uppercase rd-headline-3">
             <span class="rd-text-wrapper">
               <span class="rd-text-container rd-text-container-down">
-                <span class="rd-text">
-                  On Entrepreneurship 2022
-                </span>
+                <span class="rd-text"> On Entrepreneurship 2022 </span>
               </span>
             </span>
           </div>
@@ -235,13 +338,17 @@
           </div>
         </div>
         <div class="rd-section-title">
-          <div v-for="(title, i) in aboutContent.title" class="rd-text-row rd-headline-2">
+          <div
+            v-for="(title, i) in aboutContent.title"
+            :key="i"
+            class="rd-text-row rd-headline-2"
+          >
             <span class="rd-text-wrapper">
               <span class="rd-text-container rd-text-container-down">
                 <span v-if="i === 0" class="rd-text">
-                  <span class="rd-text-highlight rd-text-highlight-primary"
-                    >{{ title }}</span
-                  >
+                  <span class="rd-text-highlight rd-text-highlight-primary">{{
+                    title
+                  }}</span>
                 </span>
                 <span v-else class="rd-text">
                   {{ title }}
@@ -251,7 +358,11 @@
           </div>
         </div>
         <div class="rd-section-paragraph">
-          <span v-for="word in aboutContent.paragraph.split(' ')" class="rd-word-wrapper rd-body-text">
+          <span
+            v-for="(word, i) in aboutContent.paragraph.split(' ')"
+            :key="i"
+            class="rd-word-wrapper rd-body-text"
+          >
             <span class="rd-word-container rd-word-container-down">
               <span class="rd-word">
                 {{ word }}
@@ -327,7 +438,17 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
-      <div ref="rdRundown" class="rd-section rd-rundown-section" :style="baseState.viewMode === 'desktop' ? `width: calc((100vw - 9.25rem) * ${Math.ceil(rundownContent.datas.length / 3)} / 3 + 6rem)` : ''">
+      <div
+        ref="rdRundown"
+        class="rd-section rd-rundown-section"
+        :style="
+          baseState.viewMode === 'desktop'
+            ? `width: calc((100vw - 9.25rem) * ${Math.ceil(
+                rundownContent.datas.length / 3
+              )} / 3 + 6rem)`
+            : ''
+        "
+      >
         <div class="rd-section-bar-container">
           <div class="rd-section-bar"></div>
         </div>
@@ -339,7 +460,11 @@
           </div>
         </div>
         <div class="rd-section-data-container">
-          <div v-for="(data, i) in rundownContent.datas" :key="i" class="rd-section-data">
+          <div
+            v-for="(data, i) in rundownContent.datas"
+            :key="i"
+            class="rd-section-data"
+          >
             <div class="rd-section-data-time">
               <div class="rd-text-row rd-text-row-uppercase rd-headline-5">
                 <span class="rd-text-wrapper">
@@ -363,7 +488,11 @@
               </div>
             </div>
             <div class="rd-section-data-remark">
-              <span v-for="(word, i) in data.origin.split(' ')" :key="i" class="rd-word-wrapper rd-headline-6">
+              <span
+                v-for="(word, i) in data.origin.split(' ')"
+                :key="i"
+                class="rd-word-wrapper rd-headline-6"
+              >
                 <span class="rd-word-container rd-word-container-down">
                   <span class="rd-word">
                     {{ word }}
@@ -372,7 +501,11 @@
               </span>
             </div>
             <div class="rd-section-data-title">
-              <span v-for="(word, i) in data.title.split(' ')" :key="i" class="rd-word-wrapper rd-headline-5">
+              <span
+                v-for="(word, i) in data.title.split(' ')"
+                :key="i"
+                class="rd-word-wrapper rd-headline-5"
+              >
                 <span class="rd-word-container rd-word-container-down">
                   <span class="rd-word">
                     {{ word }}
@@ -483,89 +616,205 @@
         </div>
       </div>
     </div>
-    <div :style="animState !== 'init' ? 'visibility: hidden; pointer-events: none' : ''" class="rd-overlay"></div>
+    <div
+      :style="
+        animState !== 'init' ? 'visibility: hidden; pointer-events: none' : ''
+      "
+      class="rd-overlay"
+    ></div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { ComputedRef } from "vue"
-  import { gsap } from 'gsap'
-  import { ScrollTrigger } from "gsap/ScrollTrigger"
-  import Scrollbar from "smooth-scrollbar"
+  import { ComputedRef } from "vue";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import Scrollbar from "smooth-scrollbar";
 
   import { baseStore } from "./store/base";
 
   const baseState = baseStore.getState();
 
-  const rdBody = ref<HTMLDivElement>(null)
-  const rdBackgroundOne = ref<HTMLDivElement>(null)
-  const rdBackgroundTwo = ref<HTMLDivElement>(null)
-  const rdBackgroundThree = ref<HTMLDivElement>(null)
-  const rdBackgroundFour = ref<HTMLDivElement>(null)
-  const rdBackgroundFive = ref<HTMLDivElement>(null)
+  const rdNav = ref<HTMLDivElement>(null);
+  const rdNavBtn = ref<HTMLDivElement>(null);
+  const rdBody = ref<HTMLDivElement>(null);
+  const rdBackgroundOne = ref<HTMLDivElement>(null);
+  const rdBackgroundTwo = ref<HTMLDivElement>(null);
+  const rdBackgroundThree = ref<HTMLDivElement>(null);
+  const rdBackgroundFour = ref<HTMLDivElement>(null);
+  const rdBackgroundFive = ref<HTMLDivElement>(null);
 
-  const rdIntroduction = ref<HTMLDivElement>(null)
-  const rdAbout = ref<HTMLDivElement>(null)
-  const rdRundown = ref<HTMLDivElement>(null)
-  const rdFooter = ref<HTMLDivElement>(null)
+  const rdIntroduction = ref<HTMLDivElement>(null);
+  const rdAbout = ref<HTMLDivElement>(null);
+  const rdRundown = ref<HTMLDivElement>(null);
+  const rdFooter = ref<HTMLDivElement>(null);
 
-  const animState = ref<'init' | 'before-mount' | 'mounted'>('init')
+  const navAnim = ref<GSAPTimeline>(null);
+  const navState = ref<"closed" | "opened">("closed");
+  const animState = ref<"init" | "before-mount" | "mounted">("init");
 
-  const rem: ComputedRef<number> = computed((): number => typeof getComputedStyle === 'function' ? parseInt(getComputedStyle(document.body).fontSize) : 0)
+  const rem: ComputedRef<number> = computed((): number =>
+    typeof getComputedStyle === "function"
+      ? parseInt(getComputedStyle(document.body).fontSize)
+      : 0
+  );
 
   const aboutContent = {
-    title: ['Sustainable Business', 'Through Digitalization'],
-    paragraph: 'The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.'
-  }
+    title: ["Sustainable Business", "Through Digitalization"],
+    paragraph:
+      "The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.",
+  };
   const rundownContent = {
     datas: [
       {
-        time: '12:35 - 13:05 WIB',
-        speaker: 'J.E Susanto',
-        origin: 'Universitas Ciputra, Indonesia',
-        title: 'Welcoming Speech from the Conference Chair'
+        time: "12:35 - 13:05 WIB",
+        speaker: "J.E Susanto",
+        origin: "Universitas Ciputra, Indonesia",
+        title: "Welcoming Speech from the Conference Chair",
       },
       {
-        time: '13:05 - 14:05 WIB',
-        speaker: 'Sandiaga Salahuddin Uno',
-        origin: 'Minister of Tourism and Creative Economy of Indonesia',
-        title: 'Inclusive design for a digital world'
+        time: "13:05 - 14:05 WIB",
+        speaker: "Sandiaga Salahuddin Uno",
+        origin: "Minister of Tourism and Creative Economy of Indonesia",
+        title: "Inclusive design for a digital world",
       },
       {
-        time: '14:05 - 14:35 WIB',
-        speaker: 'Christina Whidya Utami',
-        origin: 'Universitas Ciputra, Indonesia',
-        title: 'Enabling ethical Design'
+        time: "14:05 - 14:35 WIB",
+        speaker: "Christina Whidya Utami",
+        origin: "Universitas Ciputra, Indonesia",
+        title: "Enabling ethical Design",
       },
       {
-        time: '14:35 - 15:05 WIB',
-        speaker: 'Tao Wang',
-        origin: 'Nanjing Normal University, China',
-        title: 'Design with Mental Health in Mind'
+        time: "14:35 - 15:05 WIB",
+        speaker: "Tao Wang",
+        origin: "Nanjing Normal University, China",
+        title: "Design with Mental Health in Mind",
       },
       {
-        time: '15:05 - 15:35 WIB',
-        speaker: 'Arnold J.',
-        origin: 'The University of Western, Australia',
-        title: 'Feminist data practices for inclusivity'
+        time: "15:05 - 15:35 WIB",
+        speaker: "Arnold J.",
+        origin: "The University of Western, Australia",
+        title: "Feminist data practices for inclusivity",
       },
       {
-        time: '15:35 - 16:05 WIB',
-        speaker: 'Nilay Balkan',
-        origin: 'University of Glasgow, United Kingdom',
-        title: 'Where do we go from here?'
+        time: "15:35 - 16:05 WIB",
+        speaker: "Nilay Balkan",
+        origin: "University of Glasgow, United Kingdom",
+        title: "Where do we go from here?",
       },
-    ]
-  }
+    ],
+  };
 
   const animate = {
+    navHandler(
+      rdNav: Element,
+      rdNavBtn: Element,
+      cb?: () => void
+    ): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({
+        paused: true,
+        onComplete() {
+          gsap.to(rdNav, {
+            pointerEvents: "auto",
+          });
+          if (cb) cb();
+        },
+        onReverseComplete() {
+          gsap.to(rdNav, {
+            pointerEvents: "none",
+          });
+        },
+      });
+
+      const rdWordContainer: Element[] = gsap.utils.toArray(
+        rdNav.querySelectorAll(".rd-word-container")
+      );
+      const rdWord: Element[] = gsap.utils.toArray(
+        rdNav.querySelectorAll(".rd-word")
+      );
+      const rdBarOne: Element = rdNavBtn.children[0];
+      const rdBarTwo: Element = rdNavBtn.children[1];
+
+      tl.to(
+        rdBarOne,
+        {
+          y: "-0.5rem",
+          height: 0,
+          duration: 0.25,
+        },
+        "<0"
+      )
+        .to(
+          rdBarTwo,
+          {
+            y: "0.5rem",
+            height: 0,
+            duration: 0.25,
+          },
+          "<0"
+        )
+        .to(rdBarOne, {
+          // y: 0,
+          x: "-0.5rem",
+          rotateZ: -45,
+          duration: 0,
+        })
+        .to(rdBarTwo, {
+          y: "-0.5rem",
+          x: "0.5rem",
+          rotateZ: 45,
+          duration: 0,
+        })
+        .to(
+          rdNav,
+          {
+            opacity: 1,
+            duration: 0.25,
+          },
+          "<0"
+        )
+        .to(rdWordContainer, {
+          y: 0,
+          duration: 0.25,
+          ease: "power2.out",
+          stagger: 0.05,
+        })
+        .to(
+          rdWord,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.05,
+          },
+          "<0"
+        )
+        .to(rdBarOne, {
+          x: 0,
+          y: 0,
+          height: "1rem",
+          duration: 0.25,
+        })
+        .to(
+          rdBarTwo,
+          {
+            x: 0,
+            y: 0,
+            height: "1rem",
+            duration: 0.25,
+          },
+          "<0"
+        );
+
+      return tl;
+    },
     backgroundInit(rdBackgroundOne: Element, cb: () => void): GSAPTimeline {
       const tl: GSAPTimeline = gsap.timeline({
         paused: true,
         onComplete() {
-          if (cb) cb()
-        }
-      })
+          if (cb) cb();
+        },
+      });
 
       const rdSvgContainer: Element[] = gsap.utils.toArray(
         rdBackgroundOne.querySelectorAll(".rd-svg-container")
@@ -573,28 +822,40 @@
       const rdSvg: Element[] = gsap.utils.toArray(
         rdBackgroundOne.querySelectorAll(".rd-svg")
       );
-      const rdDivider: Element = rdBackgroundOne.querySelector('.rd-background-divider')
+      const rdDivider: Element = rdBackgroundOne.querySelector(
+        ".rd-background-divider"
+      );
 
       tl.to(rdSvgContainer, {
         y: 0,
         duration: 0.5,
         ease: "power2.inOut",
-        stagger: 0.25
-      }).to(rdSvg, {
-        y: 0,
-        duration: 0.5,
-        ease: "power2.inOut",
-        stagger: 0.25
-      }, "<0").to(rdDivider, {
-        scaleX: 1,
-        duration: 0.5,
-        ease: "power2.inOut"
-      }, "<0.25")
+        stagger: 0.25,
+      })
+        .to(
+          rdSvg,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.inOut",
+            stagger: 0.25,
+          },
+          "<0"
+        )
+        .to(
+          rdDivider,
+          {
+            scaleX: 1,
+            duration: 0.5,
+            ease: "power2.inOut",
+          },
+          "<0.25"
+        );
 
-      return tl
+      return tl;
     },
     introductionInit(rdIntroduction: Element): GSAPTimeline {
-      const tl: GSAPTimeline = gsap.timeline({ paused: true })
+      const tl: GSAPTimeline = gsap.timeline({ paused: true });
 
       const rdTextContainer: Element[] = gsap.utils.toArray(
         rdIntroduction.querySelectorAll(".rd-text-container")
@@ -602,35 +863,43 @@
       const rdText: Element[] = gsap.utils.toArray(
         rdIntroduction.querySelectorAll(".rd-text")
       );
-      const rdTextDecoration: Element = rdIntroduction.querySelector('.rd-text-decoration')
+      const rdTextDecoration: Element = rdIntroduction.querySelector(
+        ".rd-text-decoration"
+      );
 
       tl.to(rdTextContainer, {
         y: 0,
         duration: 0.5,
         ease: "power2.out",
-        stagger: 0.125
-      }).to(rdText, {
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.125
-      }, "<0").to(rdTextDecoration, {
-        opacity: 1,
-        duration: 0.25
+        stagger: 0.125,
       })
+        .to(
+          rdText,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.125,
+          },
+          "<0"
+        )
+        .to(rdTextDecoration, {
+          opacity: 1,
+          duration: 0.25,
+        });
 
-      return tl
+      return tl;
     },
-    aboutInit(mode: 'desktop' | 'mobile', rdAbout: Element): GSAPTimeline {
+    aboutInit(mode: "desktop" | "mobile", rdAbout: Element): GSAPTimeline {
       const tl: GSAPTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: rdAbout,
-          start: mode === 'desktop' ? 'left 80%' : 'top 60%'
+          start: mode === "desktop" ? "left 80%" : "top 60%",
         },
         onComplete() {
-          rdButton.classList.remove('rd-init')
+          rdButton.classList.remove("rd-init");
         },
-      })
+      });
 
       const rdTextContainer: Element[] = gsap.utils.toArray(
         rdAbout.querySelectorAll(".rd-text-container")
@@ -644,70 +913,97 @@
       const rdWord: Element[] = gsap.utils.toArray(
         rdAbout.querySelectorAll(".rd-word")
       );
-      const rdButton: Element = rdAbout.querySelector('button.rd-button')
-      const rdButtonBackground: Element = rdButton.children[0]
-      const rdButtonOverlay: Element = rdButton.children[1]
-      const rdButtonBorder: Element = rdButton.children[2].children[0]
-      const rdButtonLabel: Element = rdButton.children[3]
-
+      const rdButton: Element = rdAbout.querySelector("button.rd-button");
+      const rdButtonBackground: Element = rdButton.children[0];
+      const rdButtonOverlay: Element = rdButton.children[1];
+      const rdButtonBorder: Element = rdButton.children[2].children[0];
+      const rdButtonLabel: Element = rdButton.children[3];
 
       tl.to(rdTextContainer, {
         y: 0,
         duration: 0.5,
         ease: "power2.out",
-        stagger: 0.125
-      }).to(rdText, {
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.125
-      }, "<0").to(rdWordContainer, {
-        y: 0,
-        duration: 0.25,
-        ease: "power2.out",
-        stagger: 0.005
-      }, "<0").to(rdWord, {
-        y: 0,
-        duration: 0.25,
-        ease: "power2.out",
-        stagger: 0.005
-      }, "<0").to(rdButtonBackground, {
-        height: '100%',
-        duration: 0.25,
-        ease: "power2.out"
-      }).to(rdButtonBackground, {
-        width: '100%',
-        duration: 0.5,
-        ease: "power2.out"
-      }).to(rdButtonOverlay, {
-        width: '100%',
-        duration: 0.5,
-        ease: "power2.out"
-      }, "<0.25").to(rdButtonBorder, {
-        x: 0,
-        duration: 0.25,
-        ease: 'power2.out'
-      }, "<0.25").to(rdButtonLabel, {
-        opacity: 1,
-        duration: 0.25
+        stagger: 0.125,
       })
+        .to(
+          rdText,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.125,
+          },
+          "<0"
+        )
+        .to(
+          rdWordContainer,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.005,
+          },
+          "<0"
+        )
+        .to(
+          rdWord,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.005,
+          },
+          "<0"
+        )
+        .to(rdButtonBackground, {
+          height: "100%",
+          duration: 0.25,
+          ease: "power2.out",
+        })
+        .to(rdButtonBackground, {
+          width: "100%",
+          duration: 0.5,
+          ease: "power2.out",
+        })
+        .to(
+          rdButtonOverlay,
+          {
+            width: "100%",
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          "<0.25"
+        )
+        .to(
+          rdButtonBorder,
+          {
+            x: 0,
+            duration: 0.25,
+            ease: "power2.out",
+          },
+          "<0.25"
+        )
+        .to(rdButtonLabel, {
+          opacity: 1,
+          duration: 0.25,
+        });
 
-      return tl
+      return tl;
     },
-    rundownInit(mode: 'desktop' | 'mobile', rdRundown: Element): GSAPTimeline {
+    rundownInit(mode: "desktop" | "mobile", rdRundown: Element): GSAPTimeline {
       const tl: GSAPTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: rdRundown,
-          start: mode === 'desktop' ? 'left 80%' : 'top 60%'
+          start: mode === "desktop" ? "left 80%" : "top 60%",
         },
-      })
+      });
 
       const rdTextContainer: Element[] = gsap.utils.toArray(
         rdRundown.querySelectorAll(".rd-text-container")
       );
       const rdText: Element[] = gsap.utils.toArray(
         rdRundown.querySelectorAll(".rd-text")
-      )
+      );
       const rdWordContainer: Element[] = gsap.utils.toArray(
         rdRundown.querySelectorAll(".rd-word-container")
       );
@@ -719,51 +1015,83 @@
         y: 0,
         duration: 0.5,
         ease: "power2.out",
-        stagger: 0.1
-      }).to(rdText, {
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.1
-      }, "<0").to(rdWordContainer, {
-        y: 0,
-        duration: 0.25,
-        ease: "power2.out",
-        stagger: 0.01
-      }, "<0").to(rdWord, {
-        y: 0,
-        duration: 0.25,
-        ease: "power2.out",
-        stagger: 0.01
-      }, "<0")
+        stagger: 0.1,
+      })
+        .to(
+          rdText,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.1,
+          },
+          "<0"
+        )
+        .to(
+          rdWordContainer,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.01,
+          },
+          "<0"
+        )
+        .to(
+          rdWord,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.01,
+          },
+          "<0"
+        );
 
-      return tl
-    }
-  }
+      return tl;
+    },
+  };
 
   class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
     static pluginName = "horizontalScroll";
 
-    transformDelta(delta: { x: number, y: number }, fromEvent: { type: string }): { x: number, y: number } {
-      if (!/wheel/.test(fromEvent.type))
-        return delta
+    transformDelta(
+      delta: { x: number; y: number },
+      fromEvent: { type: string }
+    ): { x: number; y: number } {
+      if (!/wheel/.test(fromEvent.type)) return delta;
 
-      const { x, y } = delta
+      const { x, y } = delta;
       return {
         y: 0,
-        x: Math.abs(x) > Math.abs(y) ? x : y
-      }
+        x: Math.abs(x) > Math.abs(y) ? x : y,
+      };
     }
   }
 
-  function resizeHandler(e: MediaQueryList | MediaQueryListEvent) {
+  function resizeHandler(e: MediaQueryList | MediaQueryListEvent): void {
     if (e.matches) baseStore.setViewMode("mobile");
     else baseStore.setViewMode("desktop");
   }
 
-  watch(() => baseState.viewMode, (val, oldVal) => {
-    if (val && oldVal) location.reload()
-  });
+  function navHandler(state: "closed" | "opened"): void {
+    if (!navAnim.value)
+      navAnim.value = animate.navHandler(rdNav.value, rdNavBtn.value);
+    if (state === "closed") {
+      navState.value = "opened";
+      navAnim.value.play();
+    } else {
+      navState.value = "closed";
+      navAnim.value.reverse();
+    }
+  }
+
+  watch(
+    () => baseState.viewMode,
+    (val, oldVal) => {
+      if (val && oldVal) location.reload();
+    }
+  );
 
   onBeforeMount(async () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -782,105 +1110,114 @@
     resizeHandler(mediaQuery);
 
     setTimeout(() => {
-      
-      if (baseState.viewMode === 'desktop') {
-        Scrollbar.use(HorizontalScrollPlugin)
-    
+      if (baseState.viewMode === "desktop") {
+        Scrollbar.use(HorizontalScrollPlugin);
+
         const bodyScrollbar: Scrollbar = Scrollbar.init(rdBody.value);
         bodyScrollbar.setPosition(0, 0);
         bodyScrollbar.track.yAxis.element.remove();
-  
+
         ScrollTrigger.scrollerProxy(rdBody.value, {
           scrollTop(value) {
-            if (arguments.length) bodyScrollbar.scrollTop = value
-            return bodyScrollbar.scrollTop
+            if (arguments.length) bodyScrollbar.scrollTop = value;
+            return bodyScrollbar.scrollTop;
           },
           scrollLeft(value) {
             if (arguments.length) bodyScrollbar.scrollLeft = value;
             return bodyScrollbar.scrollLeft;
-          }
+          },
         });
         ScrollTrigger.defaults({
           scroller: rdBody.value,
-          horizontal: true
-        })
-  
+          horizontal: true,
+        });
+
         bodyScrollbar.addListener(ScrollTrigger.update);
-  
-        gsap.utils.toArray(rdBody.value.querySelectorAll('.rd-section-caption')).forEach((el: Element) => {
-          ScrollTrigger.create({
-            trigger: el,
-            start: 'right right',
-            endTrigger: el.parentElement,
-            end: 'right right',
-            pin: true,
-          })
-        })
-    
+
+        gsap.utils
+          .toArray(rdBody.value.querySelectorAll(".rd-section-caption"))
+          .forEach((el: Element) => {
+            ScrollTrigger.create({
+              trigger: el,
+              start: "right right",
+              endTrigger: el.parentElement,
+              end: "right right",
+              pin: true,
+            });
+          });
+
         gsap.to(rdBackgroundOne.value, {
-          x: rdFooter.value.getBoundingClientRect().left - 6 * rem.value - rdBackgroundOne.value.getBoundingClientRect().right,
-          ease: 'power1.inOut',
+          x:
+            rdFooter.value.getBoundingClientRect().left -
+            6 * rem.value -
+            rdBackgroundOne.value.getBoundingClientRect().right,
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: rdIntroduction.value,
-            start: 'left left',
+            start: "left left",
             endTrigger: rdFooter.value,
-            end: 'right right',
-            scrub: 1
-          }
-        })
+            end: "right right",
+            scrub: 1,
+          },
+        });
         gsap.to(rdBackgroundTwo.value, {
-          x: '-20vw',
+          x: "-20vw",
           scrollTrigger: {
             trigger: rdIntroduction.value,
-            start: 'left left',
-            end: 'right left',
-            scrub: 0.5
-          }
-        })
+            start: "left left",
+            end: "right left",
+            scrub: 0.5,
+          },
+        });
         gsap.to(rdBackgroundThree.value, {
-          x: '-5vw',
+          x: "-5vw",
           scrollTrigger: {
             trigger: rdIntroduction.value,
-            start: 'left left',
-            end: 'right left',
-            scrub: 0.5
-          }
-        })
+            start: "left left",
+            end: "right left",
+            scrub: 0.5,
+          },
+        });
         gsap.to(rdBackgroundFour.value, {
-          x: '-20vw',
+          x: "-20vw",
           scrollTrigger: {
             trigger: rdAbout.value,
-            start: 'right right',
+            start: "right right",
             endTrigger: rdRundown.value,
-            end: 'left left',
-            scrub: 0.5
-          }
-        })
+            end: "left left",
+            scrub: 0.5,
+          },
+        });
         gsap.to(rdBackgroundFive.value, {
-          x: '-5vw',
+          x: "-5vw",
           scrollTrigger: {
             trigger: rdAbout.value,
-            start: 'right right',
+            start: "right right",
             endTrigger: rdRundown.value,
-            end: 'left left',
-            scrub: 0.5
-          }
-        })
+            end: "left left",
+            scrub: 0.5,
+          },
+        });
       } else {
         ScrollTrigger.defaults({
-          scroller: rdBody.value
-        })
+          scroller: rdBody.value,
+        });
       }
-  
-      const introductionInitTl: GSAPTimeline = animate.introductionInit(rdIntroduction.value)
-      const backgroundInitTl: GSAPTimeline = animate.backgroundInit(rdBackgroundOne.value, () => {
-        animState.value = 'mounted'
-        introductionInitTl.play()
-      })
-  
-      animate.aboutInit(baseState.viewMode, rdAbout.value)
-      animate.rundownInit(baseState.viewMode, rdRundown.value)
-  
+
+      const introductionInitTl: GSAPTimeline = animate.introductionInit(
+        rdIntroduction.value
+      );
+      const backgroundInitTl: GSAPTimeline = animate.backgroundInit(
+        rdBackgroundOne.value,
+        () => {
+          animState.value = "mounted";
+          introductionInitTl.play();
+        }
+      );
+
+      animate.aboutInit(baseState.viewMode, rdAbout.value);
+      animate.rundownInit(baseState.viewMode, rdRundown.value);
+
       // let r = 56
       // let g = 197
       // let b = 119
@@ -888,7 +1225,7 @@
       // let r = 255
       // let g = 0
       // let b = 0
-  
+
       // setInterval(function(){
       //   if(r > 0 && b == 0){
       //     r--
@@ -904,17 +1241,17 @@
       //   }
       //   document.documentElement.style.setProperty("--primary-color", `rgb(${r}, ${g}, ${b})`);
       // }, 10)
-  
+
       setTimeout(() => {
-        animState.value = 'before-mount'
-        backgroundInitTl.play()
-      }, 1000)
-    }, 100)
+        animState.value = "before-mount";
+        backgroundInitTl.play();
+      }, 1000);
+    }, 100);
   });
 
   useHead({
-    title: 'ICOEN 9 - International Conference On Entrepreneurship'
-  })
+    title: "ICOEN 9 - International Conference On Entrepreneurship",
+  });
 </script>
 
 <style lang="scss" scoped>
@@ -1068,11 +1405,21 @@
           width: 1.5px;
           height: 1rem;
           background: var(--font-color);
+          transition: background-color 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+          overflow: hidden;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
           &:first-child {
             transform: translateY(-0.5rem) translateX(-0.125rem);
           }
           &:last-child {
             transform: translateY(-0.5rem) translateX(0.125rem);
+          }
+        }
+        &:hover {
+          .rd-navigation-button-bar {
+            background: var(--font-light-color);
           }
         }
       }
@@ -1124,10 +1471,30 @@
       width: calc(100% - 3.125rem);
       height: 100vh;
       background: var(--primary-color);
+      opacity: 0;
+      pointer-events: none;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
+      span.rd-hover-word-container {
+        pointer-events: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s cubic-bezier(0.75, 0, 0.25, 1);
+        span.rd-hover-word {
+          position: relative;
+          color: var(--font-light-color);
+          transform: translateX(100%);
+          transition: transform 0.5s cubic-bezier(0.75, 0, 0.25, 1);
+        }
+      }
       .rd-navigation-links {
         position: relative;
         width: 100%;
@@ -1139,17 +1506,31 @@
         justify-content: space-between;
         align-items: flex-end;
         .rd-navigation-link {
+          cursor: pointer;
           position: relative;
           display: flex;
+          flex-direction: column;
           justify-content: flex-end;
-          align-items: center;
+          align-items: flex-end;
+          span.rd-placeholder-text {
+            position: relative;
+            opacity: 0.5;
+          }
+          &:hover {
+            span.rd-hover-word-container {
+              transform: translateX(0);
+              span.rd-hover-word {
+                transform: translateX(0);
+              }
+            }
+          }
         }
       }
       .rd-navigation-footer {
         position: relative;
         width: 100%;
         height: calc(100% / 3);
-        padding: 2rem 3rem 3rem 3rem;
+        padding: 3rem 3rem 3rem 3rem;
         box-sizing: border-box;
         display: flex;
         justify-content: flex-end;
@@ -1169,8 +1550,9 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            .rd-navigation-footer-contact-placehoder,
+            .rd-navigation-footer-contact-placeholder,
             .rd-navigation-footer-credit-placeholder {
+              opacity: 0.5;
               position: relative;
             }
             .rd-navigation-footer-contact-value,
@@ -1178,12 +1560,23 @@
               position: relative;
               margin-top: 0.5rem;
               text-transform: uppercase;
+              &:hover {
+                span.rd-hover-word-container {
+                  transform: translateX(0);
+                  span.rd-hover-word {
+                    transform: translateX(0);
+                  }
+                }
+              }
             }
           }
         }
         .rd-navigation-footer-contacts {
           margin-right: 5rem;
           .rd-navigation-footer-contact {
+            .rd-navigation-footer-contact-value {
+              cursor: pointer;
+            }
             .rd-navigation-footer-contact-values {
               position: relative;
               margin-top: 0.5rem;
@@ -1191,6 +1584,7 @@
               justify-content: flex-start;
               align-items: flex-start;
               .rd-navigation-footer-contact-value {
+                cursor: pointer;
                 margin-top: 0;
                 margin-right: 1rem;
               }
@@ -1944,7 +2338,7 @@
               }
               &:nth-child(3n)::after {
                 display: block;
-              }  
+              }
               &:last-child::after {
                 display: none;
               }
