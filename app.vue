@@ -3,7 +3,7 @@
     <div class="rd-mouse">
       <div class="rd-mouse-scroll"></div>
     </div>
-    <div class="rd-navigation-bar" ref="rdNav">
+    <div class="rd-navigation-bar" ref="rdNavBar">
       <div ref="rdNavBtn" class="rd-navigation-button">
         <div class="rd-navigation-button-bar"></div>
         <div class="rd-navigation-button-bar"></div>
@@ -35,6 +35,56 @@
       <button class="rd-register-button">
         <span class="rd-register-button-title rd-caption-text">register</span>
       </button>
+    </div>
+    <div class="rd-navigation" ref="rdNav">
+      <div class="rd-navigation-links">
+        <div class="rd-navigation-link rd-headline-1">about</div>
+        <div class="rd-navigation-link rd-headline-1">rundown</div>
+        <div class="rd-navigation-link rd-headline-1">publication</div>
+      </div>
+      <div class="rd-navigation-footer">
+        <div class="rd-navigation-footer-contacts">
+          <div class="rd-navigation-footer-contact">
+            <div class="rd-navigation-footer-contact-placeholder rd-placeholder-text">
+              get in touch
+            </div>
+            <div class="rd-navigation-footer-contact-value rd-headline-3">
+              icoen@ciputra.ac.id
+            </div>
+          </div>
+          <div class="rd-navigation-footer-contact">
+            <div class="rd-navigation-footer-contact-placeholder rd-placeholder-text">
+              follow us
+            </div>
+            <div class="rd-navigation-footer-contact-values rd-headline-3">
+              <div class="rd-navigation-footer-contact-value rd-headline-3">
+                facebook
+              </div>
+              <div class="rd-navigation-footer-contact-value rd-headline-3">
+                twitter
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rd-navigation-footer-credits">
+          <div class="rd-navigation-footer-credit">
+            <div class="rd-navigation-footer-credit-placeholder rd-placeholder-text">
+              hosted by
+            </div>
+            <div class="rd-navigation-footer-credit-value rd-headline-3">
+              Universitas Ciputra
+            </div>
+          </div>
+          <div class="rd-navigation-footer-credit">
+            <div class="rd-navigation-footer-credit-placeholder rd-placeholder-text">
+              developed by
+            </div>
+            <div class="rd-navigation-footer-credit-value rd-headline-3">
+              Redian Grup
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div ref="rdBody" class="rd-body">
       <div class="rd-background">
@@ -1063,6 +1113,89 @@
         span.rd-register-button-title {
           position: relative;
           color: var(--font-light-color);
+        }
+      }
+    }
+    .rd-navigation {
+      z-index: 4;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: calc(100% - 3.125rem);
+      height: 100vh;
+      background: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      .rd-navigation-links {
+        position: relative;
+        width: 100%;
+        height: calc(100% * 2 / 3);
+        padding: 5rem 3rem 3rem 3rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        .rd-navigation-link {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+      .rd-navigation-footer {
+        position: relative;
+        width: 100%;
+        height: calc(100% / 3);
+        padding: 2rem 3rem 3rem 3rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .rd-navigation-footer-contacts,
+        .rd-navigation-footer-credits {
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          .rd-navigation-footer-contact,
+          .rd-navigation-footer-credit {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .rd-navigation-footer-contact-placehoder,
+            .rd-navigation-footer-credit-placeholder {
+              position: relative;
+            }
+            .rd-navigation-footer-contact-value,
+            .rd-navigation-footer-credit-value {
+              position: relative;
+              margin-top: 0.5rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .rd-navigation-footer-contacts {
+          margin-right: 5rem;
+          .rd-navigation-footer-contact {
+            .rd-navigation-footer-contact-values {
+              position: relative;
+              margin-top: 0.5rem;
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+              .rd-navigation-footer-contact-value {
+                margin-top: 0;
+                margin-right: 1rem;
+              }
+            }
+          }
         }
       }
     }
