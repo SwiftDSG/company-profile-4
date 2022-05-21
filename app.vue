@@ -537,6 +537,133 @@
         </div>
       </div>
       <div class="rd-gap-section"></div>
+      <div ref="rdPublication" class="rd-section rd-publication-section">
+        <div class="rd-section-bar-container">
+          <div class="rd-section-bar"></div>
+        </div>
+        <div class="rd-section-caption">
+          <div class="rd-text-row rd-text-row-uppercase rd-headline-4">
+            Publication<span
+              class="rd-text-decoration rd-text-decoration-primary"
+            ></span>
+          </div>
+        </div>
+        <div class="rd-section-title">
+          <div
+            v-for="(title, i) in publicationContent.title"
+            :key="i"
+            class="rd-text-row rd-headline-2"
+          >
+            <span class="rd-text-wrapper">
+              <span class="rd-text-container rd-text-container-down">
+                <span v-if="i === 0" class="rd-text">
+                  <span class="rd-text-highlight rd-text-highlight-primary">{{
+                    title
+                  }}</span>
+                </span>
+                <span v-else class="rd-text">
+                  {{ title }}
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="rd-section-paragraph">
+          <span
+            v-for="(word, i) in publicationContent.paragraph.split(' ')"
+            :key="i"
+            class="rd-word-wrapper rd-body-text"
+          >
+            <span class="rd-word-container rd-word-container-down">
+              <span class="rd-word">
+                {{ word }}
+              </span>
+            </span>
+          </span>
+        </div>
+        <div class="rd-section-collab">
+          <div class="rd-section-placeholder">
+            <span class="rd-text-wrapper rd-placeholder-text">
+              <span class="rd-text-container rd-text-container-down">
+                <span class="rd-text">Journal Collaboration</span>
+              </span>
+            </span>
+          </div>
+          <div class="rd-section-pictures">
+            <div class="rd-section-picture">
+              <span class="rd-image-wrapper">
+                <span class="rd-image-container rd-image-container-down">
+                  <img src="/sinta.png" class="rd-image">
+                </span>
+              </span>
+            </div>
+            <div class="rd-section-picture">
+              <span class="rd-image-wrapper">
+                <span class="rd-image-container rd-image-container-down">
+                  <img src="/scopus.png" class="rd-image">
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="rd-section-decoration">
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-one :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-three />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-two :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-four :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-five :type="'secondary'" />
+          </div>
+          <div class="rd-decoration-box-s">
+            <rd-decoration-box-six :type="'secondary'" />
+          </div>
+        </div>
+      </div>
+      <div class="rd-gap-section"></div>
       <div ref="rdFooter" class="rd-section rd-footer-section">
         <div class="rd-section-bar-container">
           <div class="rd-section-bar"></div>
@@ -647,6 +774,7 @@
   const rdIntroduction = ref<HTMLDivElement>(null);
   const rdAbout = ref<HTMLDivElement>(null);
   const rdRundown = ref<HTMLDivElement>(null);
+  const rdPublication = ref<HTMLDivElement>(null);
   const rdFooter = ref<HTMLDivElement>(null);
 
   const navAnim = ref<GSAPTimeline>(null);
@@ -663,6 +791,11 @@
     title: ["Sustainable Business", "Through Digitalization"],
     paragraph:
       "The Indonesian economy based on the amount of Gross Domestic Product (GDP) based on current prices in the second quarter of 2019 reached Rp3,963.5 trillion and at the base of constant prices reached Rp2,735.2 trillion. Indonesia’s economy in the second quarter of 2019 compared to the second quarter of 2018 grew 5.05 percent (y-on-y). From the production side, growth was driven by almost all business fields, where the highest growth was achieved by Other Service Business Fields which grew 10.73 percent.",
+  };
+  const publicationContent = {
+    title: ["Journal Publication", "Opportunity"],
+    paragraph:
+      "Selected & accepted papers will be published in Science and Technology Index (SINTA) S2-S4, and indexing to Scopus",
   };
   const rundownContent = {
     datas: [
@@ -1050,6 +1183,87 @@
 
       return tl;
     },
+    publicationInit(mode: 'desktop' | 'mobile', rdPublication: Element): GSAPTimeline {
+      const tl: GSAPTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: rdPublication,
+          start: mode === "desktop" ? "left 80%" : "top 60%",
+        },
+      });
+
+      const rdTextContainer: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-text-container")
+      );
+      const rdText: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-text")
+      );
+      const rdWordContainer: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-word-container")
+      );
+      const rdWord: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-word")
+      );
+      const rdImgContainer: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-image-container")
+      );
+      const rdImg: Element[] = gsap.utils.toArray(
+        rdPublication.querySelectorAll(".rd-image")
+      );
+
+      tl.to(rdTextContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125,
+      })
+        .to(
+          rdText,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.125,
+          },
+          "<0"
+        )
+        .to(
+          rdWordContainer,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.005,
+          },
+          "<0"
+        )
+        .to(
+          rdWord,
+          {
+            y: 0,
+            duration: 0.25,
+            ease: "power2.out",
+            stagger: 0.005,
+          },
+          "<0"
+        ).to(rdImgContainer, {
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.125,
+      })
+        .to(
+          rdImg,
+          {
+            y: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.125,
+          },
+          "<0"
+        )
+
+      return tl
+    }
   };
 
   class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
@@ -1217,6 +1431,7 @@
 
       animate.aboutInit(baseState.viewMode, rdAbout.value);
       animate.rundownInit(baseState.viewMode, rdRundown.value);
+      animate.publicationInit(baseState.viewMode, rdPublication.value)
 
       // let r = 56
       // let g = 197
@@ -1888,7 +2103,8 @@
           align-items: flex-start;
         }
       }
-      .rd-about-section {
+      .rd-about-section,
+      .rd-publication-section {
         position: relative;
         width: calc(50vw - 1.5rem);
         height: 100%;
@@ -1923,10 +2139,36 @@
           margin-top: 3rem;
           display: flex;
         }
+        .rd-section-collab {
+          position: relative;
+          margin-top: 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .rd-section-placeholder {
+            position: relative;
+          }
+          .rd-section-pictures {
+            position: relative;
+            width: 100%;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .rd-section-picture {
+              position: relative;
+              width: 12.5vw;
+              filter: grayscale(1);
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+            }
+          }
+        }
       }
       .rd-rundown-section {
         position: relative;
-        // width: calc((100vw * 2 / 3) - (3.125rem * 2 / 3));
         height: 100%;
         background: var(--font-light-color);
         display: flex;
