@@ -42,7 +42,7 @@
     </div>
     <div class="rd-navigation" ref="rdNav">
       <div class="rd-navigation-links">
-        <div class="rd-navigation-link">
+        <div class="rd-navigation-link" @click="navClick('about')">
           <span class="rd-word-wrapper rd-placeholder-text">
             <span class="rd-word-container rd-word-container-down">
               <span class="rd-word">01</span>
@@ -57,7 +57,7 @@
             <span class="rd-hover-word">about</span>
           </span>
         </div>
-        <div class="rd-navigation-link">
+        <div class="rd-navigation-link" @click="navClick('rundown')">
           <span class="rd-word-wrapper rd-placeholder-text">
             <span class="rd-word-container rd-word-container-down">
               <span class="rd-word">02</span>
@@ -72,7 +72,7 @@
             <span class="rd-hover-word">rundown</span>
           </span>
         </div>
-        <div class="rd-navigation-link">
+        <div class="rd-navigation-link" @click="navClick('publication')">
           <span class="rd-word-wrapper rd-placeholder-text">
             <span class="rd-word-container rd-word-container-down">
               <span class="rd-word">03</span>
@@ -777,6 +777,7 @@
   const rdPublication = ref<HTMLDivElement>(null);
   const rdFooter = ref<HTMLDivElement>(null);
 
+  const bodyScrollbar = ref<Scrollbar>(null)
   const navAnim = ref<GSAPTimeline>(null);
   const navState = ref<"closed" | "opened">("closed");
   const animState = ref<"init" | "before-mount" | "mounted">("init");
@@ -1300,6 +1301,25 @@
     }
   }
 
+  function navClick(name: string): void {
+    if (baseState.viewMode === 'desktop') {
+      // const { x }: DOMRect = rdBody.value.querySelector(`.rd-${name}-section`).getBoundingClientRect()
+      // if (typeof x === 'number') {
+      //   navHandler(navState.value)
+      //   setTimeout(() => {
+      //     bodyScrollbar.value.scrollTo(x - 3 * rem.value, 0, 1000)
+      //   }, 2000)
+      // }
+      const el: HTMLElement = rdBody.value.querySelector(`.rd-${name}-section`)
+      if (el instanceof HTMLElement) {
+        navHandler(navState.value)
+        setTimeout(() => {
+          bodyScrollbar.value.scrollIntoView(el)
+        }, 1500)
+      }
+    }
+  }
+
   watch(
     () => baseState.viewMode,
     (val, oldVal) => {
@@ -1327,18 +1347,18 @@
       if (baseState.viewMode === "desktop") {
         Scrollbar.use(HorizontalScrollPlugin);
 
-        const bodyScrollbar: Scrollbar = Scrollbar.init(rdBody.value);
-        bodyScrollbar.setPosition(0, 0);
-        bodyScrollbar.track.yAxis.element.remove();
+        bodyScrollbar.value = Scrollbar.init(rdBody.value);
+        bodyScrollbar.value.setPosition(0, 0);
+        bodyScrollbar.value.track.yAxis.element.remove();
 
         ScrollTrigger.scrollerProxy(rdBody.value, {
           scrollTop(value) {
-            if (arguments.length) bodyScrollbar.scrollTop = value;
-            return bodyScrollbar.scrollTop;
+            if (arguments.length) bodyScrollbar.value.scrollTop = value;
+            return bodyScrollbar.value.scrollTop;
           },
           scrollLeft(value) {
-            if (arguments.length) bodyScrollbar.scrollLeft = value;
-            return bodyScrollbar.scrollLeft;
+            if (arguments.length) bodyScrollbar.value.scrollLeft = value;
+            return bodyScrollbar.value.scrollLeft;
           },
         });
         ScrollTrigger.defaults({
@@ -1346,7 +1366,7 @@
           horizontal: true,
         });
 
-        bodyScrollbar.addListener(ScrollTrigger.update);
+        bodyScrollbar.value.addListener(ScrollTrigger.update);
 
         gsap.utils
           .toArray(rdBody.value.querySelectorAll(".rd-section-caption"))
@@ -2159,6 +2179,7 @@
             .rd-section-picture {
               position: relative;
               width: 12.5vw;
+              margin-right: 2rem;
               filter: grayscale(1);
               display: flex;
               justify-content: flex-start;
