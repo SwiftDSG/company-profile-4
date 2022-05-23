@@ -286,6 +286,33 @@
             <rd-decoration-box-one />
           </div>
         </div>
+        <div
+          v-if="baseState.viewMode === 'desktop'"
+          ref="rdBackgroundSix"
+          class="rd-background-6"
+        >
+          <div class="rd-decoration-box-l rd-decoration-1">
+            <rd-decoration-box-six />
+          </div>
+          <div class="rd-decoration-box-l rd-decoration-2">
+            <rd-decoration-box-two />
+          </div>
+        </div>
+        <div
+          v-if="baseState.viewMode === 'desktop'"
+          ref="rdBackgroundSeven"
+          class="rd-background-7"
+        >
+          <div class="rd-decoration-box-s rd-decoration-1">
+            <rd-decoration-box-three />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-2">
+            <rd-decoration-box-four />
+          </div>
+          <div class="rd-decoration-box-s rd-decoration-3">
+            <rd-decoration-box-one />
+          </div>
+        </div>
       </div>
       <div ref="rdIntroduction" class="rd-introduction-section">
         <div class="rd-caption">
@@ -2076,6 +2103,52 @@
           position: absolute;
           top: 0;
           left: 100vw;
+          width: 100%;
+          height: 100%;
+          opacity: 0.75;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 4.5rem;
+            left: 75vw;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            bottom: 0;
+            left: 45vw;
+          }
+          .rd-decoration-3 {
+            position: absolute;
+            top: 1.5rem;
+            left: calc(75vw + 3rem);
+          }
+        }
+        .rd-background-6 {
+          position: absolute;
+          top: 0;
+          right: 150vw;
+          width: 100%;
+          height: 100%;
+          opacity: 0.75;
+          .rd-decoration-1 {
+            position: absolute;
+            top: 4.5rem;
+            left: 75vw;
+          }
+          .rd-decoration-2 {
+            position: absolute;
+            bottom: 0;
+            left: 45vw;
+          }
+          .rd-decoration-3 {
+            position: absolute;
+            top: 1.5rem;
+            left: calc(75vw + 3rem);
+          }
+        }
+        .rd-background-7 {
+          position: absolute;
+          top: 0;
+          right: 50vw;
           width: 100%;
           height: 100%;
           opacity: 0.75;
