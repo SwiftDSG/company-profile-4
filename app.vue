@@ -2745,6 +2745,7 @@
     --font-color: #282b34;
     --font-light-color: #fff;
     --primary-color: #38c577;
+    // --primary-color: #c538a2;
     --secondary-color: #6ed0d3;
   }
 
