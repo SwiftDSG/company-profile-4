@@ -620,14 +620,14 @@
             <div class="rd-section-picture">
               <span class="rd-image-wrapper">
                 <span class="rd-image-container rd-image-container-down">
-                  <img src="/sinta.png" class="rd-image">
+                  <img src="/sinta.png" class="rd-image" />
                 </span>
               </span>
             </div>
             <div class="rd-section-picture">
               <span class="rd-image-wrapper">
                 <span class="rd-image-container rd-image-container-down">
-                  <img src="/scopus.png" class="rd-image">
+                  <img src="/scopus.png" class="rd-image" />
                 </span>
               </span>
             </div>
@@ -804,7 +804,7 @@
   const rdPublication = ref<HTMLDivElement>(null);
   const rdFooter = ref<HTMLDivElement>(null);
 
-  const bodyScrollbar = ref<Scrollbar>(null)
+  const bodyScrollbar = ref<Scrollbar>(null);
   const navAnim = ref<GSAPTimeline>(null);
   const navState = ref<"closed" | "opened">("closed");
   const animState = ref<"init" | "before-mount" | "mounted">("init");
@@ -835,7 +835,7 @@
       },
       {
         time: "13:05 - 14:05 WIB",
-        speaker: "Sandiaga Salahuddin Uno",
+        speaker: "Sandiaga",
         origin: "Minister of Tourism and Creative Economy of Indonesia",
         title: "Inclusive design for a digital world",
       },
@@ -1211,7 +1211,10 @@
 
       return tl;
     },
-    publicationInit(mode: 'desktop' | 'mobile', rdPublication: Element): GSAPTimeline {
+    publicationInit(
+      mode: "desktop" | "mobile",
+      rdPublication: Element
+    ): GSAPTimeline {
       const tl: GSAPTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: rdPublication,
@@ -1273,12 +1276,13 @@
             stagger: 0.005,
           },
           "<0"
-        ).to(rdImgContainer, {
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.125,
-      })
+        )
+        .to(rdImgContainer, {
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.125,
+        })
         .to(
           rdImg,
           {
@@ -1288,10 +1292,10 @@
             stagger: 0.125,
           },
           "<0"
-        )
+        );
 
-      return tl
-    }
+      return tl;
+    },
   };
 
   class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
@@ -1329,7 +1333,7 @@
   }
 
   function navClick(name: string): void {
-    if (baseState.viewMode === 'desktop') {
+    if (baseState.viewMode === "desktop") {
       // const { x }: DOMRect = rdBody.value.querySelector(`.rd-${name}-section`).getBoundingClientRect()
       // if (typeof x === 'number') {
       //   navHandler(navState.value)
@@ -1337,12 +1341,12 @@
       //     bodyScrollbar.value.scrollTo(x - 3 * rem.value, 0, 1000)
       //   }, 2000)
       // }
-      const el: HTMLElement = rdBody.value.querySelector(`.rd-${name}-section`)
+      const el: HTMLElement = rdBody.value.querySelector(`.rd-${name}-section`);
       if (el instanceof HTMLElement) {
-        navHandler(navState.value)
+        navHandler(navState.value);
         setTimeout(() => {
-          bodyScrollbar.value.scrollIntoView(el)
-        }, 1500)
+          bodyScrollbar.value.scrollIntoView(el);
+        }, 1500);
       }
     }
   }
@@ -1478,7 +1482,7 @@
 
       animate.aboutInit(baseState.viewMode, rdAbout.value);
       animate.rundownInit(baseState.viewMode, rdRundown.value);
-      animate.publicationInit(baseState.viewMode, rdPublication.value)
+      animate.publicationInit(baseState.viewMode, rdPublication.value);
 
       // let r = 56
       // let g = 197
