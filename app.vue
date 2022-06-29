@@ -868,6 +868,7 @@
 
   const animate = {
     navHandler(
+      mode: "desktop" | "mobile",
       rdNav: Element,
       rdNavBtn: Element,
       cb?: () => void
@@ -896,44 +897,75 @@
       const rdBarOne: Element = rdNavBtn.children[0];
       const rdBarTwo: Element = rdNavBtn.children[1];
 
-      tl.to(
-        rdBarOne,
-        {
-          y: "-0.5rem",
-          height: 0,
-          duration: 0.25,
-        },
-        "<0"
-      )
-        .to(
-          rdBarTwo,
+      if (mode === "desktop") {
+        tl.to(
+          rdBarOne,
           {
-            y: "0.5rem",
+            y: "-0.5rem",
             height: 0,
             duration: 0.25,
           },
           "<0"
         )
-        .to(rdBarOne, {
-          // y: 0,
-          x: "-0.5rem",
-          rotateZ: -45,
-          duration: 0,
-        })
-        .to(rdBarTwo, {
-          y: "-0.5rem",
-          x: "0.5rem",
-          rotateZ: 45,
-          duration: 0,
-        })
-        .to(
-          rdNav,
+          .to(
+            rdBarTwo,
+            {
+              y: "0.5rem",
+              height: 0,
+              duration: 0.25,
+            },
+            "<0"
+          )
+          .to(rdBarOne, {
+            // y: 0,
+            x: "-0.5rem",
+            rotateZ: -45,
+            duration: 0,
+          })
+          .to(rdBarTwo, {
+            y: "-0.5rem",
+            x: "0.5rem",
+            rotateZ: 45,
+            duration: 0,
+          });
+      } else {
+        tl.to(
+          rdBarOne,
           {
-            opacity: 1,
+            x: "-0.5rem",
+            width: 0,
             duration: 0.25,
           },
           "<0"
         )
+          .to(
+            rdBarTwo,
+            {
+              x: "0.5rem",
+              width: 0,
+              duration: 0.25,
+            },
+            "<0"
+          )
+          .to(rdBarOne, {
+            y: "-0.5rem",
+            rotateZ: 45,
+            duration: 0,
+          })
+          .to(rdBarTwo, {
+            y: "-0.5rem",
+            rotateZ: -45,
+            duration: 0,
+          });
+      }
+      tl.to(
+        rdNav,
+        {
+          opacity: 1,
+          duration: 0.25,
+        },
+        "<0"
+      )
         .to(rdWordContainer, {
           y: 0,
           duration: 0.25,
@@ -949,14 +981,14 @@
             stagger: 0.05,
           },
           "<0"
-        )
-        .to(rdBarOne, {
+        );
+      if (mode === "desktop") {
+        tl.to(rdBarOne, {
           x: 0,
           y: 0,
           height: "1rem",
           duration: 0.25,
-        })
-        .to(
+        }).to(
           rdBarTwo,
           {
             x: 0,
@@ -966,6 +998,23 @@
           },
           "<0"
         );
+      } else {
+        tl.to(rdBarOne, {
+          x: 0,
+          y: 0,
+          width: "1rem",
+          duration: 0.25,
+        }).to(
+          rdBarTwo,
+          {
+            x: 0,
+            y: 0,
+            width: "1rem",
+            duration: 0.25,
+          },
+          "<0"
+        );
+      }
 
       return tl;
     },
@@ -1322,7 +1371,11 @@
 
   function navHandler(state: "closed" | "opened"): void {
     if (!navAnim.value)
-      navAnim.value = animate.navHandler(rdNav.value, rdNavBtn.value);
+      navAnim.value = animate.navHandler(
+        baseState.viewMode,
+        rdNav.value,
+        rdNavBtn.value
+      );
     if (state === "closed") {
       navState.value = "opened";
       navAnim.value.play();
@@ -2548,6 +2601,36 @@
           left: auto;
         }
       }
+      .rd-navigation {
+        top: 3.125rem;
+        width: 100vw;
+        height: calc(100vh - 3.125rem);
+        .rd-navigation-links {
+          height: 50%;
+          padding: 3rem 2rem;
+          align-items: flex-start;
+          .rd-navigation-link {
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        }
+        .rd-navigation-footer {
+          height: 50%;
+          padding: 2rem;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          .rd-navigation-footer-contacts,
+          .rd-navigation-footer-credits {
+            height: auto;
+            justify-content: flex-end;
+            .rd-navigation-footer-contact,
+            .rd-navigation-footer-credit {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
       .rd-body {
         width: 100%;
         height: auto;
@@ -2786,6 +2869,9 @@
     }
     @media only screen and (max-width: 1024px) {
       font-size: 24px;
+      .rd-headline-1 {
+        font-size: 1.5rem;
+      }
       .rd-headline-2 {
         font-size: 1rem;
       }
