@@ -2733,7 +2733,8 @@
             left: 1.5rem;
           }
         }
-        .rd-about-section {
+        .rd-about-section,
+        .rd-publication-section {
           width: 100vw;
           height: auto;
           .rd-section-title {
