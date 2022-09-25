@@ -783,7 +783,7 @@
   import { ComputedRef } from "vue";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import Scrollbar from "smooth-scrollbar";
+  import SmoothScrollbar from "smooth-scrollbar";
 
   import { baseStore } from "./store/base";
 
@@ -804,7 +804,7 @@
   const rdPublication = ref<HTMLDivElement>(null);
   const rdFooter = ref<HTMLDivElement>(null);
 
-  const bodyScrollbar = ref<Scrollbar>(null);
+  const bodyScrollbar = ref<SmoothScrollbar>(null);
   const navAnim = ref<GSAPTimeline>(null);
   const navState = ref<"closed" | "opened">("closed");
   const animState = ref<"init" | "before-mount" | "mounted">("init");
@@ -1347,7 +1347,7 @@
     },
   };
 
-  class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
+  class HorizontalScrollPlugin extends SmoothScrollbar.ScrollbarPlugin {
     static pluginName = "horizontalScroll";
 
     transformDelta(
@@ -1429,9 +1429,9 @@
 
     setTimeout(() => {
       if (baseState.viewMode === "desktop") {
-        Scrollbar.use(HorizontalScrollPlugin);
+        SmoothScrollbar.use(HorizontalScrollPlugin);
 
-        bodyScrollbar.value = Scrollbar.init(rdBody.value);
+        bodyScrollbar.value = SmoothScrollbar.init(rdBody.value);
         bodyScrollbar.value.setPosition(0, 0);
         bodyScrollbar.value.track.yAxis.element.remove();
 
