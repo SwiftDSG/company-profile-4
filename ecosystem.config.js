@@ -7,7 +7,7 @@ module.exports = {
       script: './.output/server/index.mjs',
       env: {
         "NUXT_APP_BASE_URL": "/icoen",
-        "PORT": 3002
+        "PORT": 3009
       }
     }
   ]
